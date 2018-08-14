@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +51,104 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ancienttempledbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ancienttempledbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerHelper.cs" />
+    <Compile Include="frmGameData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmGameData.Designer.cs">
+      <DependentUpon>frmGameData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeographyMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeographyMenu.Designer.cs">
+      <DependentUpon>frmGeographyMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeographyQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeographyQuestions.Designer.cs">
+      <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeographyTemples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeographyTemples.Designer.cs">
+      <DependentUpon>frmGeographyTemples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntro.Designer.cs">
+      <DependentUpon>frmIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGameMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameMenu.Designer.cs">
+      <DependentUpon>frmGameMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm1.Designer.cs">
+      <DependentUpon>frm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemplate.Designer.cs">
+      <DependentUpon>frmTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm1.resx">
+      <DependentUpon>frm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGameData.resx">
+      <DependentUpon>frmGameData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeographyMenu.resx">
+      <DependentUpon>frmGeographyMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeographyQuestions.resx">
+      <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeographyTemples.resx">
+      <DependentUpon>frmGeographyTemples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntro.resx">
+      <DependentUpon>frmIntro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGameMenu.resx">
+      <DependentUpon>frmGameMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTemplate.resx">
+      <DependentUpon>frmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +157,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ancienttempledbDataSet.xsc">
+      <DependentUpon>ancienttempledbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ancienttempledbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ancienttempledbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ancienttempledbDataSet.xss">
+      <DependentUpon>ancienttempledbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +182,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\construction_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geography_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sculpture_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neoclassic_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgNotFound.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
