@@ -12,8 +12,9 @@ namespace YSMADataManagement
 {
     public partial class frmGeographyTemples : YSMADataManagement.frmTemplate
     {
-        DataGridView dgv;
+        public DataGridView dgv;
         BindingNavigator bnv;
+        public int CurrentRow;
 
         public frmGeographyTemples()
         {
@@ -22,10 +23,7 @@ namespace YSMADataManagement
 
         private void geography_templesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.geography_templesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-
+            UpdateData();
         }
 
         private void frmGeographyTemples_Load(object sender, EventArgs e)
@@ -38,10 +36,10 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridView(dgv);
             DesignerHelper.DesignDataGridNavigator(bnv);
 
-            this.Width = 1400;
+            //this.Width = 1400;
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
-           
+
 
             dgv.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Όνομα (el)";
             dgv.Columns["dataGridViewTextBoxColumn2"].Width = 300;
@@ -72,7 +70,7 @@ namespace YSMADataManagement
 
         public void ShowPreviewImages()
         {
-            string webThumbsFolder = "http://ancienttemple.diadrasis.net";
+            string webImageFolder = "http://localhost/ancienttemple/assets/images/geography/";
             this.Enabled = false;
             foreach (DataGridViewRow row in dgv.Rows)
             {
@@ -80,7 +78,7 @@ namespace YSMADataManagement
                 if (row.Cells["dataGridViewTextBoxColumn4"].Value != DBNull.Value)
                 {
                     String file = row.Cells["dataGridViewTextBoxColumn4"].Value.ToString();
-                    HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webThumbsFolder + file);
+                    HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webImageFolder + file);
                     myRequest.Method = "GET";
                     try
                     {
@@ -99,9 +97,36 @@ namespace YSMADataManagement
                 {
                     row.Cells["previewImg"].Value = (Image)Resources.ResourceManager.GetObject("imgNotFound");
                 }
-            }             
-            
+            }
+
             this.Enabled = true;
         }
-    }
+
+        private void geography_templesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                CurrentRow = e.RowIndex;
+                UpdateData();
+                if (e.ColumnIndex == dgv.Columns["previewImg"].Index)
+                {
+                    frmGeographyTempleImage frm = new frmGeographyTempleImage();
+                    frm.templeID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
+                    frm.callingForm = this;
+                    frm.dgv = dgv;
+                    frm.SelectedRow = CurrentRow;
+                    frm.imageFile = dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+                    frm.Show();
+                }
+            }
+        }
+
+        public void UpdateData()
+        {
+            this.Validate();
+            this.geography_templesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
+            ShowPreviewImages();
+        }
+    }       
 }

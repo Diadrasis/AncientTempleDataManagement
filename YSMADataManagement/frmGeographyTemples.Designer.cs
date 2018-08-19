@@ -33,6 +33,7 @@
             this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
             this.geography_templesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
+            this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
             this.geography_templesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -46,7 +47,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.geography_templesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
             this.geography_templesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,12 +75,15 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
-            this.tableAdapterManager.geography_templesTableAdapter = null;
+            this.tableAdapterManager.geography_templesTableAdapter = this.geography_templesTableAdapter;
             this.tableAdapterManager.playersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // geography_templesTableAdapter
+            // 
+            this.geography_templesTableAdapter.ClearBeforeFill = true;
             // 
             // geography_templesBindingNavigator
             // 
@@ -101,14 +104,14 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.geography_templesBindingNavigatorSaveItem});
-            this.geography_templesBindingNavigator.Location = new System.Drawing.Point(0, 95);
+            this.geography_templesBindingNavigator.Location = new System.Drawing.Point(0, 97);
             this.geography_templesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.geography_templesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.geography_templesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.geography_templesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.geography_templesBindingNavigator.Name = "geography_templesBindingNavigator";
             this.geography_templesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.geography_templesBindingNavigator.Size = new System.Drawing.Size(955, 25);
+            this.geography_templesBindingNavigator.Size = new System.Drawing.Size(1273, 25);
             this.geography_templesBindingNavigator.TabIndex = 1;
             this.geography_templesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -165,7 +168,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -206,10 +209,6 @@
             this.geography_templesBindingNavigatorSaveItem.Text = "Save Data";
             this.geography_templesBindingNavigatorSaveItem.Click += new System.EventHandler(this.geography_templesBindingNavigatorSaveItem_Click);
             // 
-            // geography_templesTableAdapter
-            // 
-            this.geography_templesTableAdapter.ClearBeforeFill = true;
-            // 
             // geography_templesDataGridView
             // 
             this.geography_templesDataGridView.AutoGenerateColumns = false;
@@ -223,10 +222,14 @@
             this.dataGridViewTextBoxColumn4,
             this.previewImg});
             this.geography_templesDataGridView.DataSource = this.geography_templesBindingSource;
-            this.geography_templesDataGridView.Location = new System.Drawing.Point(147, 223);
+            this.geography_templesDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.geography_templesDataGridView.Location = new System.Drawing.Point(60, 159);
+            this.geography_templesDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.geography_templesDataGridView.Name = "geography_templesDataGridView";
-            this.geography_templesDataGridView.Size = new System.Drawing.Size(724, 220);
+            this.geography_templesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.geography_templesDataGridView.Size = new System.Drawing.Size(900, 400);
             this.geography_templesDataGridView.TabIndex = 2;
+            this.geography_templesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.geography_templesDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -275,10 +278,11 @@
             // 
             // frmGeographyTemples
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(955, 646);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.ClientSize = new System.Drawing.Size(1273, 584);
             this.Controls.Add(this.geography_templesDataGridView);
             this.Controls.Add(this.geography_templesBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGeographyTemples";
             this.Load += new System.EventHandler(this.frmGeographyTemples_Load);
             this.Controls.SetChildIndex(this.geography_templesBindingNavigator, 0);

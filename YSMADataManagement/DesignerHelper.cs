@@ -37,9 +37,13 @@ namespace YSMADataManagement
 
         public static void DesignDataGridView(DataGridView dg)
         {
+
+            dg.MultiSelect = false;
+            dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dg.EditMode = DataGridViewEditMode.EditOnEnter;
             //dg.Columns(0).Visible = False
             dg.Location = new Point(9, 140);
-            dg.Size = new Size(700, 350);
+            dg.Size = new Size(1400, 450);
             dg.Font = new Font("Century Gothic", 8.75f);
             dg.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             dg.AllowUserToAddRows = false;

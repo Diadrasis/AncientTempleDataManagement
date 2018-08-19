@@ -20,5 +20,11 @@ namespace YSMADataManagement
             frmGeographyTemples frm = new frmGeographyTemples();
             frm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmGeographyQuestions frm = new frmGeographyQuestions();
+            frm.Show();
+        }
     }
 }

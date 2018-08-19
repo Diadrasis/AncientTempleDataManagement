@@ -69,11 +69,23 @@
     <Compile Include="frmGeographyMenu.Designer.cs">
       <DependentUpon>frmGeographyMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGeographyQuestionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeographyQuestionDetails.Designer.cs">
+      <DependentUpon>frmGeographyQuestionDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeographyQuestions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGeographyQuestions.Designer.cs">
       <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeographyTempleImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeographyTempleImage.Designer.cs">
+      <DependentUpon>frmGeographyTempleImage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGeographyTemples.cs">
       <SubType>Form</SubType>
@@ -128,8 +140,14 @@
     <EmbeddedResource Include="frmGeographyMenu.resx">
       <DependentUpon>frmGeographyMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGeographyQuestionDetails.resx">
+      <DependentUpon>frmGeographyQuestionDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGeographyQuestions.resx">
       <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeographyTempleImage.resx">
+      <DependentUpon>frmGeographyTempleImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeographyTemples.resx">
       <DependentUpon>frmGeographyTemples.cs</DependentUpon>
@@ -224,6 +242,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgNotFound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
