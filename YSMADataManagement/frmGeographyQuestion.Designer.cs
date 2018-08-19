@@ -1,6 +1,6 @@
 ﻿namespace YSMADataManagement
 {
-    partial class frmGeographyQuestionDetails
+    partial class frmGeographyQuestion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label questidLabel;
             System.Windows.Forms.Label questtext_grLabel;
             System.Windows.Forms.Label questtext_enLabel;
             System.Windows.Forms.Label templeidLabel;
             System.Windows.Forms.Label feedbacktext_grLabel;
             System.Windows.Forms.Label feedbacktext_enLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeographyQuestionDetails));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeographyQuestion));
+            System.Windows.Forms.Label label1;
             this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
             this.geography_questionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.geography_questionTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_questionTableAdapter();
@@ -52,12 +52,12 @@
             this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            questidLabel = new System.Windows.Forms.Label();
             questtext_grLabel = new System.Windows.Forms.Label();
             questtext_enLabel = new System.Windows.Forms.Label();
             templeidLabel = new System.Windows.Forms.Label();
             feedbacktext_grLabel = new System.Windows.Forms.Label();
             feedbacktext_enLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingNavigator)).BeginInit();
@@ -67,19 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // questidLabel
-            // 
-            questidLabel.AutoSize = true;
-            questidLabel.Location = new System.Drawing.Point(75, 186);
-            questidLabel.Name = "questidLabel";
-            questidLabel.Size = new System.Drawing.Size(59, 17);
-            questidLabel.TabIndex = 3;
-            questidLabel.Text = "questid:";
-            // 
             // questtext_grLabel
             // 
             questtext_grLabel.AutoSize = true;
-            questtext_grLabel.Location = new System.Drawing.Point(75, 215);
+            questtext_grLabel.Location = new System.Drawing.Point(12, 151);
             questtext_grLabel.Name = "questtext_grLabel";
             questtext_grLabel.Size = new System.Drawing.Size(88, 17);
             questtext_grLabel.TabIndex = 5;
@@ -88,7 +79,7 @@
             // questtext_enLabel
             // 
             questtext_enLabel.AutoSize = true;
-            questtext_enLabel.Location = new System.Drawing.Point(536, 218);
+            questtext_enLabel.Location = new System.Drawing.Point(419, 151);
             questtext_enLabel.Name = "questtext_enLabel";
             questtext_enLabel.Size = new System.Drawing.Size(91, 17);
             questtext_enLabel.TabIndex = 7;
@@ -97,7 +88,7 @@
             // templeidLabel
             // 
             templeidLabel.AutoSize = true;
-            templeidLabel.Location = new System.Drawing.Point(75, 366);
+            templeidLabel.Location = new System.Drawing.Point(854, 122);
             templeidLabel.Name = "templeidLabel";
             templeidLabel.Size = new System.Drawing.Size(70, 17);
             templeidLabel.TabIndex = 9;
@@ -106,7 +97,7 @@
             // feedbacktext_grLabel
             // 
             feedbacktext_grLabel.AutoSize = true;
-            feedbacktext_grLabel.Location = new System.Drawing.Point(75, 503);
+            feedbacktext_grLabel.Location = new System.Drawing.Point(12, 325);
             feedbacktext_grLabel.Name = "feedbacktext_grLabel";
             feedbacktext_grLabel.Size = new System.Drawing.Size(115, 17);
             feedbacktext_grLabel.TabIndex = 11;
@@ -115,7 +106,7 @@
             // feedbacktext_enLabel
             // 
             feedbacktext_enLabel.AutoSize = true;
-            feedbacktext_enLabel.Location = new System.Drawing.Point(542, 500);
+            feedbacktext_enLabel.Location = new System.Drawing.Point(419, 325);
             feedbacktext_enLabel.Name = "feedbacktext_enLabel";
             feedbacktext_enLabel.Size = new System.Drawing.Size(118, 17);
             feedbacktext_enLabel.TabIndex = 13;
@@ -176,7 +167,7 @@
             // questidTextBox
             // 
             this.questidTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "questid", true));
-            this.questidTextBox.Location = new System.Drawing.Point(199, 183);
+            this.questidTextBox.Location = new System.Drawing.Point(12, 125);
             this.questidTextBox.Name = "questidTextBox";
             this.questidTextBox.Size = new System.Drawing.Size(100, 23);
             this.questidTextBox.TabIndex = 4;
@@ -184,37 +175,37 @@
             // questtext_grTextBox
             // 
             this.questtext_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "questtext_gr", true));
-            this.questtext_grTextBox.Location = new System.Drawing.Point(199, 212);
+            this.questtext_grTextBox.Location = new System.Drawing.Point(15, 180);
             this.questtext_grTextBox.Multiline = true;
             this.questtext_grTextBox.Name = "questtext_grTextBox";
-            this.questtext_grTextBox.Size = new System.Drawing.Size(311, 125);
+            this.questtext_grTextBox.Size = new System.Drawing.Size(375, 125);
             this.questtext_grTextBox.TabIndex = 6;
             // 
             // questtext_enTextBox
             // 
             this.questtext_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "questtext_en", true));
-            this.questtext_enTextBox.Location = new System.Drawing.Point(666, 218);
+            this.questtext_enTextBox.Location = new System.Drawing.Point(422, 180);
             this.questtext_enTextBox.Multiline = true;
             this.questtext_enTextBox.Name = "questtext_enTextBox";
-            this.questtext_enTextBox.Size = new System.Drawing.Size(306, 119);
+            this.questtext_enTextBox.Size = new System.Drawing.Size(375, 125);
             this.questtext_enTextBox.TabIndex = 8;
             // 
             // feedbacktext_grTextBox
             // 
             this.feedbacktext_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "feedbacktext_gr", true));
-            this.feedbacktext_grTextBox.Location = new System.Drawing.Point(199, 500);
+            this.feedbacktext_grTextBox.Location = new System.Drawing.Point(15, 348);
             this.feedbacktext_grTextBox.Multiline = true;
             this.feedbacktext_grTextBox.Name = "feedbacktext_grTextBox";
-            this.feedbacktext_grTextBox.Size = new System.Drawing.Size(311, 171);
+            this.feedbacktext_grTextBox.Size = new System.Drawing.Size(375, 125);
             this.feedbacktext_grTextBox.TabIndex = 12;
             // 
             // feedbacktext_enTextBox
             // 
             this.feedbacktext_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "feedbacktext_en", true));
-            this.feedbacktext_enTextBox.Location = new System.Drawing.Point(666, 497);
+            this.feedbacktext_enTextBox.Location = new System.Drawing.Point(422, 350);
             this.feedbacktext_enTextBox.Multiline = true;
             this.feedbacktext_enTextBox.Name = "feedbacktext_enTextBox";
-            this.feedbacktext_enTextBox.Size = new System.Drawing.Size(306, 171);
+            this.feedbacktext_enTextBox.Size = new System.Drawing.Size(375, 123);
             this.feedbacktext_enTextBox.TabIndex = 14;
             // 
             // templeidComboBox
@@ -224,11 +215,12 @@
             this.templeidComboBox.DataSource = this.geographytemplesBindingSource;
             this.templeidComboBox.DisplayMember = "templename_gr";
             this.templeidComboBox.FormattingEnabled = true;
-            this.templeidComboBox.Location = new System.Drawing.Point(199, 358);
+            this.templeidComboBox.Location = new System.Drawing.Point(828, 148);
             this.templeidComboBox.Name = "templeidComboBox";
-            this.templeidComboBox.Size = new System.Drawing.Size(311, 25);
+            this.templeidComboBox.Size = new System.Drawing.Size(382, 25);
             this.templeidComboBox.TabIndex = 15;
             this.templeidComboBox.ValueMember = "templeid";
+            this.templeidComboBox.SelectedIndexChanged += new System.EventHandler(this.templeidComboBox_SelectedIndexChanged);
             // 
             // geographytemplesBindingSource
             // 
@@ -241,29 +233,38 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(666, 366);
+            this.pictureBox2.Location = new System.Drawing.Point(828, 180);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(306, 109);
+            this.pictureBox2.Size = new System.Drawing.Size(375, 125);
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(199, 708);
+            this.pictureBox3.Location = new System.Drawing.Point(828, 350);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(773, 126);
+            this.pictureBox3.Size = new System.Drawing.Size(375, 125);
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // frmGeographyQuestionDetails
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(825, 325);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(118, 17);
+            label1.TabIndex = 18;
+            label1.Text = "feedbacktext en:";
+            // 
+            // frmGeographyQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1273, 846);
+            this.ClientSize = new System.Drawing.Size(1273, 487);
+            this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.templeidComboBox);
-            this.Controls.Add(questidLabel);
             this.Controls.Add(this.questidTextBox);
             this.Controls.Add(questtext_grLabel);
             this.Controls.Add(this.questtext_grTextBox);
@@ -275,7 +276,7 @@
             this.Controls.Add(feedbacktext_enLabel);
             this.Controls.Add(this.feedbacktext_enTextBox);
             this.Controls.Add(this.geography_questionBindingNavigator);
-            this.Name = "frmGeographyQuestionDetails";
+            this.Name = "frmGeographyQuestion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGeographyQuestionDetails_FormClosing);
             this.Load += new System.EventHandler(this.frmGeographyQuestionDetails_Load);
             this.Controls.SetChildIndex(this.geography_questionBindingNavigator, 0);
@@ -289,10 +290,10 @@
             this.Controls.SetChildIndex(this.questtext_grTextBox, 0);
             this.Controls.SetChildIndex(questtext_grLabel, 0);
             this.Controls.SetChildIndex(this.questidTextBox, 0);
-            this.Controls.SetChildIndex(questidLabel, 0);
             this.Controls.SetChildIndex(this.templeidComboBox, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.pictureBox3, 0);
+            this.Controls.SetChildIndex(label1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingNavigator)).EndInit();

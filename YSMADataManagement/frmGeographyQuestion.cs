@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace YSMADataManagement
 {
-    public partial class frmGeographyQuestionDetails : YSMADataManagement.frmTemplate
+    public partial class frmGeographyQuestion : YSMADataManagement.frmTemplate
     {
         public int questionID;
         public int templeID;
@@ -19,7 +19,7 @@ namespace YSMADataManagement
         public string templeImg;
         public string feedbackImg;
 
-        public frmGeographyQuestionDetails()
+        public frmGeographyQuestion()
         {
             InitializeComponent();
         }
@@ -32,6 +32,7 @@ namespace YSMADataManagement
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
             this.callingForm.Update();
             this.callingForm.Reload();
+            this.ShowImages();
 
         }
 
@@ -48,48 +49,14 @@ namespace YSMADataManagement
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
            
-            this.pictureBox3.Image = Properties.Resources.imgNotFound;
+            //this.pictureBox3.Image = Properties.Resources.imgNotFound;
             //string img = GetTempleImage(this.templeID);
-            //ShowImages();
-        }
-
-        private string GetTempleImage(int templeid)
-        {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.ancienttempledbConnectionString;
-            SqlCommand command = new SqlCommand();
-            string img = "";
-
-            command.Connection = conn;
-            command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT templeimg FROM temples WHERE templeid=@templeid";
-            command.Parameters.AddWithValue("@templid", templeid);
-
-
-
-            try
-            { 
-                conn.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        img = reader["templimg"].ToString();
-                    }
-                }
-                conn.Close();
-            }
-            catch
-            {
-                MessageBox.Show("could not connect!");
-                img = "none";
-            }
-            return img;
-        }
+            ShowImages();
+        }      
 
         public void ShowImages()
         {
-            string webImageFolder = "http://localhost/ancienttemple/assets/images/geography/";          
+            string webImageFolder = Paths.webFolderPath;          
 
             if (!String.IsNullOrEmpty(this.templeImg))
             {
@@ -105,12 +72,12 @@ namespace YSMADataManagement
                 }
                 catch
                 {
-                    this.pictureBox2.Image = (Image)Resources.ResourceManager.GetObject("imgNotFound");
+                    this.pictureBox2.Image = Properties.Resources.imgNotFound;
                 }
             }
             else
             {
-                this.pictureBox2.Image = (Image)Resources.ResourceManager.GetObject("imgNotFound");
+                this.pictureBox2.Image = Properties.Resources.imgNotFound;
             }
 
             if (!String.IsNullOrEmpty(this.feedbackImg))
@@ -139,7 +106,7 @@ namespace YSMADataManagement
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            frmGeographyTempleImage frm = new frmGeographyTempleImage();
+            frmGeographyImage frm = new frmGeographyImage();
             frm.imageFile = feedbackImg;
             frm.callingQuestionDetails = this;
             frm.Show();
@@ -150,6 +117,11 @@ namespace YSMADataManagement
         {
 
             this.callingForm.dgv.CurrentRow.Cells[6].Value = feedbackImg;
+        }
+
+        private void templeidComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.pictureBox2.Image = null;
         }
     }
 }

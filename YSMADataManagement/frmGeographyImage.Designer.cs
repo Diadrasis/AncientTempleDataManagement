@@ -1,6 +1,6 @@
 ﻿namespace YSMADataManagement
 {
-    partial class frmGeographyTempleImage
+    partial class frmGeographyImage
     {
         /// <summary>
         /// Required designer variable.

@@ -13,17 +13,17 @@ using YSMADataManagement.Properties;
 
 namespace YSMADataManagement
 {
-    public partial class frmGeographyTempleImage : Form
+    public partial class frmGeographyImage : Form
     {
         public int templeID;
         public string imageFile;
         public string newImageFile;
         public frmGeographyTemples callingForm;
-        public frmGeographyQuestionDetails callingQuestionDetails;
+        public frmGeographyQuestion callingQuestionDetails;
         public DataGridView dgv;
         public int SelectedRow;
 
-        public frmGeographyTempleImage()
+        public frmGeographyImage()
         {
             InitializeComponent();
         }
@@ -130,7 +130,7 @@ namespace YSMADataManagement
             string un = "giannisftp";
             string ps = "!giannisftp$1";
             string filePath = newImageFile;
-            string serverPath = "ftp://www.diadrasis.net/";
+            string serverPath = Paths.webFolderPath;
 
 
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverPath+f);

@@ -36,7 +36,7 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridView(dgv);
             DesignerHelper.DesignDataGridNavigator(bnv);
 
-            //this.Width = 1400;
+            this.Width = 1300;
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
 
@@ -70,7 +70,7 @@ namespace YSMADataManagement
 
         public void ShowPreviewImages()
         {
-            string webImageFolder = "http://localhost/ancienttemple/assets/images/geography/";
+            string webImageFolder = Paths.webFolderPath;
             this.Enabled = false;
             foreach (DataGridViewRow row in dgv.Rows)
             {
@@ -110,7 +110,7 @@ namespace YSMADataManagement
                 UpdateData();
                 if (e.ColumnIndex == dgv.Columns["previewImg"].Index)
                 {
-                    frmGeographyTempleImage frm = new frmGeographyTempleImage();
+                    frmGeographyImage frm = new frmGeographyImage();
                     frm.templeID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
                     frm.callingForm = this;
                     frm.dgv = dgv;

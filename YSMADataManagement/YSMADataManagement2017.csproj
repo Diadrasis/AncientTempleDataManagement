@@ -69,11 +69,11 @@
     <Compile Include="frmGeographyMenu.Designer.cs">
       <DependentUpon>frmGeographyMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGeographyQuestionDetails.cs">
+    <Compile Include="frmGeographyQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGeographyQuestionDetails.Designer.cs">
-      <DependentUpon>frmGeographyQuestionDetails.cs</DependentUpon>
+    <Compile Include="frmGeographyQuestion.Designer.cs">
+      <DependentUpon>frmGeographyQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGeographyQuestions.cs">
       <SubType>Form</SubType>
@@ -81,11 +81,11 @@
     <Compile Include="frmGeographyQuestions.Designer.cs">
       <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGeographyTempleImage.cs">
+    <Compile Include="frmGeographyImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGeographyTempleImage.Designer.cs">
-      <DependentUpon>frmGeographyTempleImage.cs</DependentUpon>
+    <Compile Include="frmGeographyImage.Designer.cs">
+      <DependentUpon>frmGeographyImage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGeographyTemples.cs">
       <SubType>Form</SubType>
@@ -129,6 +129,7 @@
     <Compile Include="frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm1.resx">
@@ -140,14 +141,14 @@
     <EmbeddedResource Include="frmGeographyMenu.resx">
       <DependentUpon>frmGeographyMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGeographyQuestionDetails.resx">
-      <DependentUpon>frmGeographyQuestionDetails.cs</DependentUpon>
+    <EmbeddedResource Include="frmGeographyQuestion.resx">
+      <DependentUpon>frmGeographyQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeographyQuestions.resx">
       <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGeographyTempleImage.resx">
-      <DependentUpon>frmGeographyTempleImage.cs</DependentUpon>
+    <EmbeddedResource Include="frmGeographyImage.resx">
+      <DependentUpon>frmGeographyImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeographyTemples.resx">
       <DependentUpon>frmGeographyTemples.cs</DependentUpon>

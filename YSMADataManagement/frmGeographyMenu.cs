@@ -26,5 +26,10 @@ namespace YSMADataManagement
             frmGeographyQuestions frm = new frmGeographyQuestions();
             frm.Show();
         }
+
+        private void frmGeographyMenu_Load(object sender, EventArgs e)
+        {
+            this.Text = "Δεδομένα Γεωγραφίας";
+        }
     }
 }

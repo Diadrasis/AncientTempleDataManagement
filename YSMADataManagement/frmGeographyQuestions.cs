@@ -36,25 +36,31 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridView(dgv);
             DesignerHelper.DesignDataGridNavigator(bnv);
 
-            this.Width = 1400;
+            this.Size = new Size(1200, 600);
+            dgv.Size = new Size(1150, 300);
+
+            
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
 
 
             dgv.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Κείμενο (el)";
-            dgv.Columns["dataGridViewTextBoxColumn2"].Width = 300;
+            dgv.Columns["dataGridViewTextBoxColumn2"].Width = 200;
 
             dgv.Columns["dataGridViewTextBoxColumn3"].HeaderText = "Κείμενο (en)";
-            dgv.Columns["dataGridViewTextBoxColumn3"].Width = 300;
+            dgv.Columns["dataGridViewTextBoxColumn3"].Width = 200;
 
             dgv.Columns["dataGridViewTextBoxColumn4"].HeaderText = "Ναός";
             dgv.Columns["dataGridViewTextBoxColumn4"].Width = 200;
 
+            dgv.Columns["templeFile"].Visible=false;
+           
+
             dgv.Columns["dataGridViewTextBoxColumn5"].HeaderText = "Ανάδραση (el)";
-            dgv.Columns["dataGridViewTextBoxColumn5"].Width = 200;
+            dgv.Columns["dataGridViewTextBoxColumn5"].Width = 160;
 
             dgv.Columns["dataGridViewTextBoxColumn6"].HeaderText = "Ανάδραση (en)";
-            dgv.Columns["dataGridViewTextBoxColumn6"].Width = 200;
+            dgv.Columns["dataGridViewTextBoxColumn6"].Width = 160;
 
             dgv.Columns["details"].HeaderText = "";
             dgv.Columns["details"].Width = 70;
@@ -71,9 +77,10 @@ namespace YSMADataManagement
                 UpdateData();
                 if (e.ColumnIndex == dgv.Columns["details"].Index)
                 {
-                    frmGeographyQuestionDetails frm = new frmGeographyQuestionDetails();
+                    frmGeographyQuestion frm = new frmGeographyQuestion();
                     frm.questionID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
                     frm.templeID= Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value);
+                    frm.templeImg= dgv.Rows[e.RowIndex].Cells["templeFile"].FormattedValue.ToString();
                     frm.feedbackImg= dgv.Rows[e.RowIndex].Cells["feedbackImg"].Value.ToString();
 
                     frm.callingForm = this;
