@@ -107,7 +107,7 @@ namespace YSMADataManagement
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            frmGeographyImage frm = new frmGeographyImage();
+            frmImage frm = new frmImage();
             frm.imageFile = feedbackImg;
             frm.callingQuestionDetails = this;
             frm.Show();

@@ -13,17 +13,18 @@ using YSMADataManagement.Properties;
 
 namespace YSMADataManagement
 {
-    public partial class frmGeographyImage : Form
+    public partial class frmImage : Form
     {
         public int templeID;
         public string imageFile;
         public string newImageFile;
         public frmGeographyTemples callingForm;
         public frmGeographyQuestion callingQuestionDetails;
+        public frmDidYouKnowDetails callingDidYouKnowDetails;
         public DataGridView dgv;
         public int SelectedRow;
 
-        public frmGeographyImage()
+        public frmImage()
         {
             InitializeComponent();
         }
@@ -35,14 +36,15 @@ namespace YSMADataManagement
             this.button1.Visible = true;
             this.button2.Visible = false;
             this.button3.Visible = false;
+            this.label1.Visible = false;
+            
             ShowImage();
         }
 
         private void ShowImage()
         {
             if (!String.IsNullOrEmpty(imageFile))
-            {
-               
+            {               
                 if (imageFile.Contains("jpg") || imageFile.Contains("png") )
                 {
                     string webImageFolder = Paths.webFolderPath;
@@ -54,7 +56,7 @@ namespace YSMADataManagement
                         {
                             System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(myResponse.GetResponseStream());
                             this.pictureBox2.Image = bmp;                          
-                            label2.Text = bmp.Width.ToString() + " x " + bmp.Height.ToString() + " ";
+                            label2.Text = "Αρχείο:" + imageFile + " Διαστάσεις:" + bmp.Width.ToString() + " x " + bmp.Height.ToString() + " ";
                         }
                     }
                     catch
@@ -106,7 +108,7 @@ namespace YSMADataManagement
                 newImageFile = filePaths[0];
                 System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(filePaths[0]);
                 this.pictureBox2.Image = bmp;
-                label2.Text = bmp.Width.ToString() + " x " + bmp.Height.ToString() + " ";
+                label2.Text = "Αρχείο:" + newImageFile.Substring(newImageFile.LastIndexOf("\\") + 1) + " Διαστάσεις:" + bmp.Width.ToString() + " x " + bmp.Height.ToString() + " ";
 
             }
         }
@@ -130,17 +132,18 @@ namespace YSMADataManagement
             string un = "giannisftp";
             string ps = "!giannisftp$1";
             string filePath = newImageFile;
-            string serverPath = Paths.ftpFolderPath;
-            //----
-
-          
-
-
-
-            //----
-
-
-
+            string serverPath="";
+            if (this.callingForm!=null || this.callingQuestionDetails != null)
+            {
+                serverPath= Paths.ftpFolderPath;
+            }
+            else if (this.callingDidYouKnowDetails!=null)
+            {
+                serverPath = Paths.didYouKnowFolderPath;
+            }
+            
+            
+            
             try
             {
                 FtpWebRequest requestExists = (FtpWebRequest)WebRequest.Create(serverPath + f);
@@ -237,10 +240,7 @@ namespace YSMADataManagement
                 }
             }
 
-            //------------------
-
-
-          
+            //------------------                    
 
             if (callingForm != null)
             {
@@ -251,6 +251,11 @@ namespace YSMADataManagement
             {
                 callingQuestionDetails.feedbackImg = f;
                 callingQuestionDetails.ShowImages();
+            }
+            else if (callingDidYouKnowDetails!=null)
+            {
+                callingDidYouKnowDetails.dykImg = f;
+                callingDidYouKnowDetails.ShowImage();
             }
             this.Close();         
 

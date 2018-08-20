@@ -13,6 +13,7 @@ namespace YSMADataManagement
     {
         public int dykid;
         public string dykImg;
+        public frmDidYouKnow callingForm;
         public frmDidYouKnowDetails()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace YSMADataManagement
             this.Validate();
             this.didyouknowDetailsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-
+            callingForm.dgv.CurrentRow.Cells[6].Value = this.dykImg;            
         }       
 
         private void frmDidYoyKnowDetails_Load(object sender, EventArgs e)
@@ -36,13 +37,16 @@ namespace YSMADataManagement
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
+            this.dykidTextBox.Visible = false;            
+            this.gameidTextBox.Visible = false;
+            
+            
             ShowImage();
         }
 
         public void ShowImage()
         {
-            string webImageFolder = Paths.webFolderPath;
+            string webImageFolder = Paths.webDidYouKnowFolderPath;
 
             if (!String.IsNullOrEmpty(this.dykImg))
             {
@@ -65,6 +69,25 @@ namespace YSMADataManagement
             {
                 this.pictureBox2.Image = Properties.Resources.imgNotFound;
             }           
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmImage frm = new frmImage();
+            frm.imageFile = this.dykImg;
+            frm.callingDidYouKnowDetails = this;
+            frm.Show();
+        }
+
+        private void frmDidYouKnowDetails_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.callingForm.UpdateData();
+            this.callingForm.Reload();
+        }
+
+        public void Reload()
+        {
+            this.didyouknowDetailsTableAdapter.Fill(this.ancienttempledbDataSet.didyouknowDetails, this.dykid);
         }
     }
 }

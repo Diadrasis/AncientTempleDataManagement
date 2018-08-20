@@ -1,6 +1,6 @@
 ﻿namespace YSMADataManagement
 {
-    partial class frmGeographyImage
+    partial class frmImage
     {
         /// <summary>
         /// Required designer variable.
@@ -56,6 +56,7 @@
             this.label1.Size = new System.Drawing.Size(52, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -89,6 +90,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox2.Location = new System.Drawing.Point(71, 84);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(909, 297);
@@ -97,7 +99,7 @@
             this.pictureBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox2_DragDrop);
             this.pictureBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox2_DragEnter);
             // 
-            // frmGeographyImage
+            // frmImage
             // 
             this.ClientSize = new System.Drawing.Size(1072, 472);
             this.Controls.Add(this.label2);
@@ -106,7 +108,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "frmGeographyImage";
+            this.Name = "frmImage";
             this.Load += new System.EventHandler(this.frmGeographyTempleImage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

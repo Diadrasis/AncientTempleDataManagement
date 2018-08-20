@@ -21,10 +21,7 @@ namespace YSMADataManagement
 
         private void didyouknowBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.didyouknowBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-
+            UpdateData();
         }
      
 
@@ -32,7 +29,7 @@ namespace YSMADataManagement
         {
             try
             {
-                this.didyouknowTableAdapter.Fill(this.ancienttempledbDataSet.didyouknow, this.gameid);
+                Reload();
             }
             catch (System.Exception ex)
             {
@@ -81,13 +78,25 @@ namespace YSMADataManagement
                 {
                     frmDidYouKnowDetails frm = new frmDidYouKnowDetails();
                     frm.dykid = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
-                    //frm.callingForm = this;
+                    frm.callingForm = this;
                     //frm.dgv = dgv;
                     //frm.SelectedRow = CurrentRow;
-                    frm.dykImg = dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn6"].Value.ToString();
+                    frm.dykImg = dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
                     frm.Show();
                 }
             }
+        }
+
+        public void UpdateData()
+        {
+            this.Validate();
+            this.didyouknowBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
+        }
+
+        public void Reload()
+        {
+            this.didyouknowTableAdapter.Fill(this.ancienttempledbDataSet.didyouknow, this.gameid);
         }
     }
 }

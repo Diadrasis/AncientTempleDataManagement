@@ -84,6 +84,7 @@
             dykidLabel.Size = new System.Drawing.Size(46, 17);
             dykidLabel.TabIndex = 3;
             dykidLabel.Text = "dykid:";
+            dykidLabel.Visible = false;
             // 
             // gameidLabel
             // 
@@ -93,6 +94,7 @@
             gameidLabel.Size = new System.Drawing.Size(63, 17);
             gameidLabel.TabIndex = 5;
             gameidLabel.Text = "gameid:";
+            gameidLabel.Visible = false;
             // 
             // questiontext_grLabel
             // 
@@ -349,16 +351,19 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(130, 513);
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox2.Location = new System.Drawing.Point(130, 485);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(628, 251);
+            this.pictureBox2.Size = new System.Drawing.Size(930, 251);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmDidYouKnowDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1090, 846);
+            this.ClientSize = new System.Drawing.Size(1090, 749);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(dykidLabel);
             this.Controls.Add(this.dykidTextBox);
@@ -376,6 +381,7 @@
             this.Controls.Add(this.imagefileTextBox);
             this.Controls.Add(this.didyouknowDetailsBindingNavigator);
             this.Name = "frmDidYouKnowDetails";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDidYouKnowDetails_FormClosing);
             this.Load += new System.EventHandler(this.frmDidYoyKnowDetails_Load);
             this.Controls.SetChildIndex(this.didyouknowDetailsBindingNavigator, 0);
             this.Controls.SetChildIndex(this.imagefileTextBox, 0);

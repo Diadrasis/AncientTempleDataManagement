@@ -99,11 +99,11 @@
     <Compile Include="frmGeographyQuestions.Designer.cs">
       <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGeographyImage.cs">
+    <Compile Include="frmImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGeographyImage.Designer.cs">
-      <DependentUpon>frmGeographyImage.cs</DependentUpon>
+    <Compile Include="frmImage.Designer.cs">
+      <DependentUpon>frmImage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGeographyTemples.cs">
       <SubType>Form</SubType>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="frmGeographyQuestions.resx">
       <DependentUpon>frmGeographyQuestions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGeographyImage.resx">
-      <DependentUpon>frmGeographyImage.cs</DependentUpon>
+    <EmbeddedResource Include="frmImage.resx">
+      <DependentUpon>frmImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeographyTemples.resx">
       <DependentUpon>frmGeographyTemples.cs</DependentUpon>

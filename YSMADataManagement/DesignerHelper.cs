@@ -37,7 +37,6 @@ namespace YSMADataManagement
 
         public static void DesignDataGridView(DataGridView dg)
         {
-
             dg.MultiSelect = false;
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg.EditMode = DataGridViewEditMode.EditOnEnter;
@@ -54,7 +53,6 @@ namespace YSMADataManagement
             dg.DefaultCellStyle.SelectionBackColor = Color.LightGray;
             dg.DefaultCellStyle.SelectionForeColor = Color.Black;
             //dg.Columns(0).Visible = False
-
         }
 
         public static void DesignDataGridNavigator(BindingNavigator dgn)

@@ -110,7 +110,7 @@ namespace YSMADataManagement
                 UpdateData();
                 if (e.ColumnIndex == dgv.Columns["previewImg"].Index)
                 {
-                    frmGeographyImage frm = new frmGeographyImage();
+                    frmImage frm = new frmImage();
                     frm.templeID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
                     frm.callingForm = this;
                     frm.dgv = dgv;
