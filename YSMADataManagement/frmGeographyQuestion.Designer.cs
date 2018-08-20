@@ -34,8 +34,8 @@
             System.Windows.Forms.Label templeidLabel;
             System.Windows.Forms.Label feedbacktext_grLabel;
             System.Windows.Forms.Label feedbacktext_enLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeographyQuestion));
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeographyQuestion));
             this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
             this.geography_questionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.geography_questionTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_questionTableAdapter();
@@ -72,45 +72,54 @@
             questtext_grLabel.AutoSize = true;
             questtext_grLabel.Location = new System.Drawing.Point(12, 151);
             questtext_grLabel.Name = "questtext_grLabel";
-            questtext_grLabel.Size = new System.Drawing.Size(88, 17);
+            questtext_grLabel.Size = new System.Drawing.Size(155, 17);
             questtext_grLabel.TabIndex = 5;
-            questtext_grLabel.Text = "questtext gr:";
+            questtext_grLabel.Text = "Κείμενο Ερώτησης (ελ):";
             // 
             // questtext_enLabel
             // 
             questtext_enLabel.AutoSize = true;
             questtext_enLabel.Location = new System.Drawing.Point(419, 151);
             questtext_enLabel.Name = "questtext_enLabel";
-            questtext_enLabel.Size = new System.Drawing.Size(91, 17);
+            questtext_enLabel.Size = new System.Drawing.Size(158, 17);
             questtext_enLabel.TabIndex = 7;
-            questtext_enLabel.Text = "questtext en:";
+            questtext_enLabel.Text = "Κείμενο Ερώτησης (en):";
             // 
             // templeidLabel
             // 
             templeidLabel.AutoSize = true;
-            templeidLabel.Location = new System.Drawing.Point(854, 122);
+            templeidLabel.Location = new System.Drawing.Point(831, 122);
             templeidLabel.Name = "templeidLabel";
-            templeidLabel.Size = new System.Drawing.Size(70, 17);
+            templeidLabel.Size = new System.Drawing.Size(48, 17);
             templeidLabel.TabIndex = 9;
-            templeidLabel.Text = "templeid:";
+            templeidLabel.Text = "Ναός:";
             // 
             // feedbacktext_grLabel
             // 
             feedbacktext_grLabel.AutoSize = true;
             feedbacktext_grLabel.Location = new System.Drawing.Point(12, 325);
             feedbacktext_grLabel.Name = "feedbacktext_grLabel";
-            feedbacktext_grLabel.Size = new System.Drawing.Size(115, 17);
+            feedbacktext_grLabel.Size = new System.Drawing.Size(166, 17);
             feedbacktext_grLabel.TabIndex = 11;
-            feedbacktext_grLabel.Text = "feedbacktext gr:";
+            feedbacktext_grLabel.Text = "Κείμενο Ανάδρασης (ελ):";
             // 
             // feedbacktext_enLabel
             // 
             feedbacktext_enLabel.AutoSize = true;
             feedbacktext_enLabel.Location = new System.Drawing.Point(419, 325);
             feedbacktext_enLabel.Name = "feedbacktext_enLabel";
-            feedbacktext_enLabel.Size = new System.Drawing.Size(118, 17);
+            feedbacktext_enLabel.Size = new System.Drawing.Size(169, 17);
             feedbacktext_enLabel.TabIndex = 13;
-            feedbacktext_enLabel.Text = "feedbacktext en:";
+            feedbacktext_enLabel.Text = "Κείμενο Ανάδρασης (en):";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(825, 325);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(175, 17);
+            label1.TabIndex = 18;
+            label1.Text = "Φωτογραφία Ανάδρασης:";
             // 
             // ancienttempledbDataSet
             // 
@@ -247,15 +256,6 @@
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(825, 325);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(118, 17);
-            label1.TabIndex = 18;
-            label1.Text = "feedbacktext en:";
             // 
             // frmGeographyQuestion
             // 

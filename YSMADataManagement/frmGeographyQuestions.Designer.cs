@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeographyQuestions));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.geography_questionsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.geography_questionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,20 +47,20 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.geography_questionsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.geography_questionsDataGridView = new System.Windows.Forms.DataGridView();
-            this.geographytemplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.geography_questionsTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_questionsTableAdapter();
-            this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
-            this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
-            this.geographytemplesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.geographytemplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.templeFile = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.geographytemplesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feedbackImg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.details = new System.Windows.Forms.DataGridViewImageColumn();
+            this.geography_questionsTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_questionsTableAdapter();
+            this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
+            this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionsBindingNavigator)).BeginInit();
             this.geography_questionsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionsBindingSource)).BeginInit();
@@ -218,39 +219,21 @@
             this.feedbackImg,
             this.details});
             this.geography_questionsDataGridView.DataSource = this.geography_questionsBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.geography_questionsDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.geography_questionsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.geography_questionsDataGridView.Location = new System.Drawing.Point(75, 128);
             this.geography_questionsDataGridView.Name = "geography_questionsDataGridView";
+            this.geography_questionsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.geography_questionsDataGridView.Size = new System.Drawing.Size(679, 220);
             this.geography_questionsDataGridView.TabIndex = 1;
             this.geography_questionsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.geography_questionsDataGridView_CellContentClick);
-            // 
-            // geographytemplesBindingSource
-            // 
-            this.geographytemplesBindingSource.DataMember = "geography_temples";
-            this.geographytemplesBindingSource.DataSource = this.ancienttempledbDataSet;
-            // 
-            // geography_questionsTableAdapter
-            // 
-            this.geography_questionsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.gamesTableAdapter = null;
-            this.tableAdapterManager.geography_questionsTableAdapter = this.geography_questionsTableAdapter;
-            this.tableAdapterManager.geography_questionTableAdapter = null;
-            this.tableAdapterManager.geography_templesTableAdapter = null;
-            this.tableAdapterManager.playersTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // geography_templesTableAdapter
-            // 
-            this.geography_templesTableAdapter.ClearBeforeFill = true;
-            // 
-            // geographytemplesBindingSource1
-            // 
-            this.geographytemplesBindingSource1.DataMember = "geography_temples";
-            this.geographytemplesBindingSource1.DataSource = this.ancienttempledbDataSet;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -281,6 +264,11 @@
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn4.ValueMember = "templeid";
             // 
+            // geographytemplesBindingSource
+            // 
+            this.geographytemplesBindingSource.DataMember = "geography_temples";
+            this.geographytemplesBindingSource.DataSource = this.ancienttempledbDataSet;
+            // 
             // templeFile
             // 
             this.templeFile.DataPropertyName = "templeid";
@@ -291,6 +279,11 @@
             this.templeFile.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.templeFile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.templeFile.ValueMember = "templeid";
+            // 
+            // geographytemplesBindingSource1
+            // 
+            this.geographytemplesBindingSource1.DataMember = "geography_temples";
+            this.geographytemplesBindingSource1.DataSource = this.ancienttempledbDataSet;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -313,10 +306,28 @@
             // details
             // 
             this.details.HeaderText = "Details";
-            this.details.Image = global::YSMADataManagement.Properties.Resources.details;
+            this.details.Image = ((System.Drawing.Image)(resources.GetObject("details.Image")));
             this.details.Name = "details";
             this.details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // geography_questionsTableAdapter
+            // 
+            this.geography_questionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.gamesTableAdapter = null;
+            this.tableAdapterManager.geography_questionsTableAdapter = this.geography_questionsTableAdapter;
+            this.tableAdapterManager.geography_questionTableAdapter = null;
+            this.tableAdapterManager.geography_templesTableAdapter = null;
+            this.tableAdapterManager.playersTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // geography_templesTableAdapter
+            // 
+            this.geography_templesTableAdapter.ClearBeforeFill = true;
             // 
             // frmGeographyQuestions
             // 
@@ -363,12 +374,12 @@
         private System.Windows.Forms.DataGridView geography_questionsDataGridView;
         private System.Windows.Forms.BindingSource geographytemplesBindingSource;
         private ancienttempledbDataSetTableAdapters.geography_templesTableAdapter geography_templesTableAdapter;
+        private System.Windows.Forms.BindingSource geographytemplesBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn templeFile;
-        private System.Windows.Forms.BindingSource geographytemplesBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn feedbackImg;

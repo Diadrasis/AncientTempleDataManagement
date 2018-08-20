@@ -8,23 +8,23 @@ using System.Windows.Forms;
 
 namespace YSMADataManagement
 {
-    public partial class frmGameMenu : YSMADataManagement.frmTemplate
+    public partial class frmDidYouKnowMenu : YSMADataManagement.frmTemplate
     {
-        public frmGameMenu()
+        public frmDidYouKnowMenu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmIntro frm = new frmIntro();
+            frmDidYouKnow frm = new frmDidYouKnow();
             frm.gameid = 2;
             frm.Show();
         }
 
-        private void frmGameMenu_Load(object sender, EventArgs e)
+        private void frmDidYouKnowMenu_Load(object sender, EventArgs e)
         {
-            this.Text = "Εισαγωγές Παιχνιδιών";
+            this.Text = "Ήξερες Ότι...";
         }
     }
 }

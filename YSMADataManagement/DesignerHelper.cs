@@ -44,13 +44,15 @@ namespace YSMADataManagement
             //dg.Columns(0).Visible = False
             dg.Location = new Point(9, 140);
             //dg.Size = new Size(900, 300);
-            dg.Font = new Font("Century Gothic", 8.75f);
+            dg.Font = new Font("Century Gothic", 10f);
             dg.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             dg.AllowUserToAddRows = false;
             //dg.Dock = DockStyle.Fill;
             dg.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dg.AllowUserToResizeRows = false;
             dg.RowTemplate.Height = 30;
+            dg.DefaultCellStyle.SelectionBackColor = Color.LightGray;
+            dg.DefaultCellStyle.SelectionForeColor = Color.Black;
             //dg.Columns(0).Visible = False
 
         }

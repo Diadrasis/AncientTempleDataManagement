@@ -45,7 +45,7 @@ namespace YSMADataManagement
                
                 if (imageFile.Contains("jpg") || imageFile.Contains("png") )
                 {
-                    string webImageFolder = "http://localhost/ancienttemple/assets/images/geography/";
+                    string webImageFolder = Paths.webFolderPath;
                     HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webImageFolder + imageFile);
                     myRequest.Method = "GET";
                     try
@@ -130,36 +130,117 @@ namespace YSMADataManagement
             string un = "giannisftp";
             string ps = "!giannisftp$1";
             string filePath = newImageFile;
-            string serverPath = Paths.webFolderPath;
+            string serverPath = Paths.ftpFolderPath;
+            //----
+
+          
 
 
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverPath+f);
-            request.Method = WebRequestMethods.Ftp.UploadFile;
 
-            // This example assumes the FTP site uses anonymous logon.
-            request.Credentials = new NetworkCredential(un, ps);
-
-            // Copy the contents of the file to the request stream.
-            StreamReader sourceStream = new StreamReader(newImageFile);
-
-            //this is for texts
-            //byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+            //----
 
 
-            //this is for image
-            byte[] fileContents = File.ReadAllBytes(newImageFile);
-            sourceStream.Close();
 
-            request.ContentLength = fileContents.Length;
+            try
+            {
+                FtpWebRequest requestExists = (FtpWebRequest)WebRequest.Create(serverPath + f);
+                requestExists.Credentials = new NetworkCredential(un, ps);
+                requestExists.Method = WebRequestMethods.Ftp.GetFileSize;
 
-            Stream requestStream = request.GetRequestStream();
-            requestStream.Write(fileContents, 0, fileContents.Length);
-            requestStream.Close();
+                FtpWebResponse responseExists = (FtpWebResponse)requestExists.GetResponse();
+                DialogResult dialogResult = MessageBox.Show("Το αρχείο υπάρχει ήδη! Θέλετε να αντικατασταθεί;", "Some Title", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    responseExists.Close();
+                    //LoadFile(serverPath, (NetworkCredential)requestExists.Credentials);
+                    try
+                    {
 
-            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-            response.Close();
+                        FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverPath + f);
+                        request.Method = WebRequestMethods.Ftp.UploadFile;
 
-            MessageBox.Show("file was uploaded!");
+                        // This example assumes the FTP site uses anonymous logon.
+                        request.Credentials = new NetworkCredential(un, ps);
+
+                        // Copy the contents of the file to the request stream.
+                        StreamReader sourceStream = new StreamReader(newImageFile);
+
+                        //this is for texts
+                        //byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+
+
+                        //this is for image
+                        byte[] fileContents = File.ReadAllBytes(newImageFile);
+                        sourceStream.Close();
+
+                        request.ContentLength = fileContents.Length;
+
+                        Stream requestStream = request.GetRequestStream();
+                        requestStream.Write(fileContents, 0, fileContents.Length);
+                        requestStream.Close();
+
+                        FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                        response.Close();
+
+                        MessageBox.Show("Το αρχείο φορτώθηκε!");
+                    }
+                    catch (WebException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+
+                }
+
+            }
+            catch (WebException ex)
+            {
+                FtpWebResponse responseExists = (FtpWebResponse)ex.Response;
+                if (responseExists.StatusCode ==
+                    FtpStatusCode.ActionNotTakenFileUnavailable)
+                {
+                    try
+                    {
+
+                        FtpWebRequest request = (FtpWebRequest)WebRequest.Create(serverPath + f);
+                        request.Method = WebRequestMethods.Ftp.UploadFile;
+
+                        // This example assumes the FTP site uses anonymous logon.
+                        request.Credentials = new NetworkCredential(un, ps);
+
+                        // Copy the contents of the file to the request stream.
+                        StreamReader sourceStream = new StreamReader(newImageFile);
+
+                        //this is for texts
+                        //byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+
+
+                        //this is for image
+                        byte[] fileContents = File.ReadAllBytes(newImageFile);
+                        sourceStream.Close();
+
+                        request.ContentLength = fileContents.Length;
+
+                        Stream requestStream = request.GetRequestStream();
+                        requestStream.Write(fileContents, 0, fileContents.Length);
+                        requestStream.Close();
+
+                        FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                        response.Close();
+
+                        MessageBox.Show("Το αρχείο φορτώθηκε!");
+                    }
+                    catch (WebException ex2)
+                    {
+                        MessageBox.Show(ex2.ToString());
+                    }
+
+                }
+            }
+
+            //------------------
+
+
+          
 
             if (callingForm != null)
             {
@@ -168,12 +249,50 @@ namespace YSMADataManagement
             }
             else if (callingQuestionDetails != null)
             {
-                callingQuestionDetails.feedbackImg = newImageFile;
+                callingQuestionDetails.feedbackImg = f;
                 callingQuestionDetails.ShowImages();
             }
-            this.Close();
-          
+            this.Close();         
 
+        }
+
+        private void LoadFile(string path, NetworkCredential credentials)
+        {
+            try
+            {
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(path);
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+
+                // This example assumes the FTP site uses anonymous logon.
+                request.Credentials = credentials;
+
+                // Copy the contents of the file to the request stream.
+                StreamReader sourceStream = new StreamReader(newImageFile);
+
+                //this is for texts
+                //byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+
+
+                //this is for image
+                byte[] fileContents = File.ReadAllBytes(newImageFile);
+                sourceStream.Close();
+
+                request.ContentLength = fileContents.Length;
+
+                Stream requestStream = request.GetRequestStream();
+                requestStream.Write(fileContents, 0, fileContents.Length);
+                requestStream.Close();
+
+                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                response.Close();
+
+                MessageBox.Show("Το αρχείο φορτώθηκε!");
+
+            }
+            catch(WebException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            } 
         }
     }
 }

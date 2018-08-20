@@ -30,10 +30,10 @@ namespace YSMADataManagement
             this.Validate();
             this.geography_questionBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-            this.callingForm.Update();
-            this.callingForm.Reload();
+            this.callingForm.dgv.CurrentRow.Cells[7].Value = feedbackImg;
             this.ShowImages();
-
+            //this.callingForm.UpdateData();
+            //this.callingForm.Reload();  
         }
 
         private void frmGeographyQuestionDetails_Load(object sender, EventArgs e)
@@ -48,9 +48,10 @@ namespace YSMADataManagement
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-           
+
             //this.pictureBox3.Image = Properties.Resources.imgNotFound;
             //string img = GetTempleImage(this.templeID);
+            this.questidTextBox.Visible = false;
             ShowImages();
         }      
 
@@ -116,7 +117,10 @@ namespace YSMADataManagement
         private void frmGeographyQuestionDetails_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            this.callingForm.dgv.CurrentRow.Cells[6].Value = feedbackImg;
+            this.callingForm.dgv.CurrentRow.Cells[7].Value = feedbackImg;
+            this.callingForm.UpdateData();
+            this.callingForm.Reload();
+
         }
 
         private void templeidComboBox_SelectedIndexChanged(object sender, EventArgs e)

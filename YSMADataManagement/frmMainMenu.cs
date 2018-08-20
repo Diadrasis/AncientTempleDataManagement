@@ -32,5 +32,11 @@ namespace YSMADataManagement
             frmGameData frm = new frmGameData();
             frm.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmDidYouKnowMenu frm = new frmDidYouKnowMenu();
+            frm.Show();
+        }
     }
 }

@@ -57,6 +57,24 @@
       <DependentUpon>ancienttempledbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DesignerHelper.cs" />
+    <Compile Include="frmDidYouKnow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDidYouKnow.Designer.cs">
+      <DependentUpon>frmDidYouKnow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDidYouKnowMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDidYouKnowMenu.Designer.cs">
+      <DependentUpon>frmDidYouKnowMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDidYouKnowDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDidYouKnowDetails.Designer.cs">
+      <DependentUpon>frmDidYouKnowDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGameData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +153,15 @@
     <EmbeddedResource Include="frm1.resx">
       <DependentUpon>frm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDidYouKnow.resx">
+      <DependentUpon>frmDidYouKnow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDidYouKnowMenu.resx">
+      <DependentUpon>frmDidYouKnowMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDidYouKnowDetails.resx">
+      <DependentUpon>frmDidYouKnowDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGameData.resx">
       <DependentUpon>frmGameData.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,7 +227,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\construction_front.png" />
@@ -243,6 +272,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgNotFound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\details.png" />
