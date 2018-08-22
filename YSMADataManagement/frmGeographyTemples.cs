@@ -36,7 +36,9 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridView(dgv);
             DesignerHelper.DesignDataGridNavigator(bnv);
 
-            this.Width = 1300;
+            this.Width = 1200;
+            dgv.Size = new Size(1100, 400);
+            this.Text = "Ναοί";
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
 
@@ -48,23 +50,23 @@ namespace YSMADataManagement
             dgv.Columns["dataGridViewTextBoxColumn3"].Width = 300;
 
             dgv.Columns["dataGridViewTextBoxColumn5"].HeaderText = "Συντεταγμένες Χ";
-            dgv.Columns["dataGridViewTextBoxColumn5"].Width = 70;
+            dgv.Columns["dataGridViewTextBoxColumn5"].Width = 90;
 
             dgv.Columns["dataGridViewTextBoxColumn6"].HeaderText = "Συντεταγμένες Υ";
-            dgv.Columns["dataGridViewTextBoxColumn6"].Width = 70;
+            dgv.Columns["dataGridViewTextBoxColumn6"].Width = 90;
 
             dgv.Columns["dataGridViewTextBoxColumn4"].HeaderText = "Αρχείο";
-            dgv.Columns["dataGridViewTextBoxColumn4"].Width = 200;
+            dgv.Columns["dataGridViewTextBoxColumn4"].Width = 150;
 
             dgv.Columns["previewImg"].HeaderText = "Προεπισκόπιση";
-            dgv.Columns["previewImg"].Width = 200;
+            dgv.Columns["previewImg"].Width = 170;
 
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                row.Height = 60;
-            }
+            //foreach (DataGridViewRow row in dgv.Rows)
+            //{
+                //row.Height = 60;
+            //}
 
-            ShowPreviewImages();
+            //ShowPreviewImages();
 
         }
 
@@ -126,7 +128,7 @@ namespace YSMADataManagement
             this.Validate();
             this.geography_templesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-            ShowPreviewImages();
+            //ShowPreviewImages();
         }
     }       
 }

@@ -66,7 +66,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.button3.Image = global::YSMADataManagement.Properties.Resources.girl;
-            this.button3.Location = new System.Drawing.Point(558, 226);
+            this.button3.Location = new System.Drawing.Point(743, 226);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(174, 186);
@@ -79,8 +79,8 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button4.Image = global::YSMADataManagement.Properties.Resources.character_04;
-            this.button4.Location = new System.Drawing.Point(757, 226);
+            this.button4.Image = global::YSMADataManagement.Properties.Resources.characters02;
+            this.button4.Location = new System.Drawing.Point(541, 226);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(182, 186);
@@ -100,6 +100,7 @@
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainMenu";
+            this.Load += new System.EventHandler(this.frmMainMenu_Load);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.button2, 0);
             this.Controls.SetChildIndex(this.button3, 0);

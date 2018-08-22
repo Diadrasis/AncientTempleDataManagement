@@ -17,7 +17,8 @@ namespace YSMADataManagement
 
         private void frmGameData_Load(object sender, EventArgs e)
         {
-            this.Text="Δεδομένα Παιχνιδιών";
+            this.Size = new Size(1100, 700);
+            this.Text="Δεδομένα Παιχνιδιών"; 
         }
 
         private void button1_Click(object sender, EventArgs e)

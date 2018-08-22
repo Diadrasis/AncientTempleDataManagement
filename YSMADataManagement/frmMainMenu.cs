@@ -38,5 +38,10 @@ namespace YSMADataManagement
             frmDidYouKnowMenu frm = new frmDidYouKnowMenu();
             frm.Show();
         }
+
+        private void frmMainMenu_Load(object sender, EventArgs e)
+        {
+            this.Text="Αρχικό Μενού";
+        }
     }
 }

@@ -37,7 +37,8 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridView(dgv);
             DesignerHelper.DesignDataGridNavigator(bnv);
 
-            this.Width = 1400;
+            this.Width = 1200;
+            dgv.Size = new Size(1100, 400);
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
             dgv.Columns["dataGridViewTextBoxColumn1"].HeaderText = "ID";
@@ -45,10 +46,27 @@ namespace YSMADataManagement
             
 
             dgv.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Όνομα Χρήστη";
-            dgv.Columns["dataGridViewTextBoxColumn2"].Width = 550;
+            dgv.Columns["dataGridViewTextBoxColumn2"].Width = 200;
 
             dgv.Columns["dataGridViewTextBoxColumn3"].HeaderText = "Κωδικός";
-            dgv.Columns["dataGridViewTextBoxColumn3"].Width = 200;
+            dgv.Columns["dataGridViewTextBoxColumn3"].Width = 100;
+                       
+            dgv.Columns["avatar_person"].HeaderText = "Avatar";
+            dgv.Columns["avatar_person"].Width = 130;
+
+            dgv.Columns["avatar_haircolor"].HeaderText = "Χρώμα Μαλιών";
+            dgv.Columns["avatar_haircolor"].Width = 150;
+
+            dgv.Columns["avatar_clothcolor"].HeaderText = "Χρώμα Ρούχων";
+            dgv.Columns["avatar_clothcolor"].Width = 150;
+
+            dgv.Columns["player_house_file"].HeaderText = "Σπίτι";
+            dgv.Columns["player_house_file"].Width = 200;
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                row.Height = 30;
+            }
 
         }
 

@@ -24,6 +24,7 @@ namespace YSMADataManagement
 
         private void frmGameMenu_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(1100, 700);
             this.Text = "Εισαγωγές Παιχνιδιών";
         }
     }

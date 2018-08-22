@@ -75,8 +75,11 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
+            this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
+            this.tableAdapterManager.geography_questionTableAdapter = null;
             this.tableAdapterManager.geography_templesTableAdapter = this.geography_templesTableAdapter;
             this.tableAdapterManager.playersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -222,11 +225,11 @@
             this.dataGridViewTextBoxColumn4,
             this.previewImg});
             this.geography_templesDataGridView.DataSource = this.geography_templesBindingSource;
-            this.geography_templesDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.geography_templesDataGridView.Location = new System.Drawing.Point(60, 159);
             this.geography_templesDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.geography_templesDataGridView.Name = "geography_templesDataGridView";
-            this.geography_templesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.geography_templesDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.geography_templesDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.geography_templesDataGridView.Size = new System.Drawing.Size(900, 400);
             this.geography_templesDataGridView.TabIndex = 2;
             this.geography_templesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.geography_templesDataGridView_CellContentClick);
