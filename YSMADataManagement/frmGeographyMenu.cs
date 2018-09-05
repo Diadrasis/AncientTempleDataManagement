@@ -31,5 +31,11 @@ namespace YSMADataManagement
         {
             this.Text = "Δεδομένα Γεωγραφίας";
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmGeographyTemples2 frm = new frmGeographyTemples2();
+            frm.Show();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace YSMADataManagement
             this.Validate();
             this.didyouknowDetailsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-            callingForm.dgv.CurrentRow.Cells[6].Value = this.dykImg;            
+            //callingForm.dgv.CurrentRow.Cells[6].Value = this.dykImg;            
         }       
 
         private void frmDidYoyKnowDetails_Load(object sender, EventArgs e)
@@ -37,9 +37,16 @@ namespace YSMADataManagement
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+            ((Label)this.Controls["questiontext_grLabel"]).Text = "Ερώτηση (gr)";
+            ((Label)this.Controls["questiontext_enLabel"]).Text = "Ερώτηση (en)";
+            ((Label)this.Controls["answertext_grLabel"]).Text = "Απάντηση (gr)";
+            ((Label)this.Controls["answertext_enLabel"]).Text = "Απάντηση (en)";
+            ((Label)this.Controls["imagefileLabel"]).Text = "Αρχείο";
+
             this.dykidTextBox.Visible = false;            
             this.gameidTextBox.Visible = false;
-            
+            this.Text = "Ήξερες ότι;";
             
             ShowImage();
         }

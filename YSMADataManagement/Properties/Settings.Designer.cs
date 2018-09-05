@@ -26,8 +26,8 @@ namespace YSMADataManagement.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=5.172.201.61;user id=root;password=D!@drA$2011;persistsecurityinfo=True;da" +
-            "tabase=ancienttempledb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=5.172.201.61;user id=templeuser;password=!temple$1;persistsecurityinfo=Tru" +
+            "e;database=ancienttempledb")]
         public string ancienttempledbConnectionString {
             get {
                 return ((string)(this["ancienttempledbConnectionString"]));

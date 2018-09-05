@@ -26,5 +26,11 @@ namespace YSMADataManagement
             frmGeographyMenu frm = new frmGeographyMenu();
             frm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmConstruvtionMenu frm = new frmConstruvtionMenu();
+            frm.Show();
+        }
     }
 }

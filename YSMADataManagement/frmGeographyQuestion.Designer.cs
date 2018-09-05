@@ -52,6 +52,7 @@
             this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.feedback_imgTextBox = new System.Windows.Forms.TextBox();
             questtext_grLabel = new System.Windows.Forms.Label();
             questtext_enLabel = new System.Windows.Forms.Label();
             templeidLabel = new System.Windows.Forms.Label();
@@ -97,7 +98,7 @@
             // feedbacktext_grLabel
             // 
             feedbacktext_grLabel.AutoSize = true;
-            feedbacktext_grLabel.Location = new System.Drawing.Point(12, 325);
+            feedbacktext_grLabel.Location = new System.Drawing.Point(12, 381);
             feedbacktext_grLabel.Name = "feedbacktext_grLabel";
             feedbacktext_grLabel.Size = new System.Drawing.Size(166, 17);
             feedbacktext_grLabel.TabIndex = 11;
@@ -106,7 +107,7 @@
             // feedbacktext_enLabel
             // 
             feedbacktext_enLabel.AutoSize = true;
-            feedbacktext_enLabel.Location = new System.Drawing.Point(419, 325);
+            feedbacktext_enLabel.Location = new System.Drawing.Point(419, 381);
             feedbacktext_enLabel.Name = "feedbacktext_enLabel";
             feedbacktext_enLabel.Size = new System.Drawing.Size(169, 17);
             feedbacktext_enLabel.TabIndex = 13;
@@ -115,7 +116,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(825, 325);
+            label1.Location = new System.Drawing.Point(825, 348);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(175, 17);
             label1.TabIndex = 18;
@@ -138,6 +139,8 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
+            this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
             this.tableAdapterManager.geography_questionTableAdapter = this.geography_questionTableAdapter;
@@ -202,7 +205,7 @@
             // feedbacktext_grTextBox
             // 
             this.feedbacktext_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "feedbacktext_gr", true));
-            this.feedbacktext_grTextBox.Location = new System.Drawing.Point(15, 348);
+            this.feedbacktext_grTextBox.Location = new System.Drawing.Point(15, 404);
             this.feedbacktext_grTextBox.Multiline = true;
             this.feedbacktext_grTextBox.Name = "feedbacktext_grTextBox";
             this.feedbacktext_grTextBox.Size = new System.Drawing.Size(375, 125);
@@ -211,7 +214,7 @@
             // feedbacktext_enTextBox
             // 
             this.feedbacktext_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "feedbacktext_en", true));
-            this.feedbacktext_enTextBox.Location = new System.Drawing.Point(422, 350);
+            this.feedbacktext_enTextBox.Location = new System.Drawing.Point(422, 406);
             this.feedbacktext_enTextBox.Multiline = true;
             this.feedbacktext_enTextBox.Name = "feedbacktext_enTextBox";
             this.feedbacktext_enTextBox.Size = new System.Drawing.Size(375, 123);
@@ -250,17 +253,26 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(828, 350);
+            this.pictureBox3.Location = new System.Drawing.Point(828, 406);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(375, 125);
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // feedback_imgTextBox
+            // 
+            this.feedback_imgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geography_questionBindingSource, "feedback_img", true));
+            this.feedback_imgTextBox.Location = new System.Drawing.Point(829, 378);
+            this.feedback_imgTextBox.Name = "feedback_imgTextBox";
+            this.feedback_imgTextBox.Size = new System.Drawing.Size(374, 23);
+            this.feedback_imgTextBox.TabIndex = 19;
+            // 
             // frmGeographyQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.ClientSize = new System.Drawing.Size(1273, 487);
+            this.ClientSize = new System.Drawing.Size(1273, 561);
+            this.Controls.Add(this.feedback_imgTextBox);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -294,6 +306,7 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.pictureBox3, 0);
             this.Controls.SetChildIndex(label1, 0);
+            this.Controls.SetChildIndex(this.feedback_imgTextBox, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingNavigator)).EndInit();
@@ -325,5 +338,6 @@
         private ancienttempledbDataSetTableAdapters.geography_templesTableAdapter geography_templesTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox feedback_imgTextBox;
     }
 }

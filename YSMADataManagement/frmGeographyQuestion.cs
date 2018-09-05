@@ -18,6 +18,7 @@ namespace YSMADataManagement
         public frmGeographyQuestions callingForm;
         public string templeImg;
         public string feedbackImg;
+        public TextBox feedbackImgTxt;
 
         public frmGeographyQuestion()
         {
@@ -30,7 +31,7 @@ namespace YSMADataManagement
             this.Validate();
             this.geography_questionBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
-            this.callingForm.dgv.CurrentRow.Cells[7].Value = feedbackImg;
+            //this.callingForm.dgv.CurrentRow.Cells[7].Value = feedbackImg;
             this.ShowImages();
             //this.callingForm.UpdateData();
             //this.callingForm.Reload();  
@@ -52,6 +53,8 @@ namespace YSMADataManagement
             //this.pictureBox3.Image = Properties.Resources.imgNotFound;
             //string img = GetTempleImage(this.templeID);
             this.questidTextBox.Visible = false;
+            this.feedbackImgTxt = this.feedback_imgTextBox;
+            
             ShowImages();
         }      
 
@@ -117,7 +120,7 @@ namespace YSMADataManagement
         private void frmGeographyQuestionDetails_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            this.callingForm.dgv.CurrentRow.Cells[7].Value = feedbackImg;
+            //this.callingForm.dgv.CurrentRow.Cells[7].Value = feedbackImg;
             this.callingForm.UpdateData();
             this.callingForm.Reload();
 

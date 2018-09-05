@@ -41,6 +41,8 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridView(dgv);
             DesignerHelper.DesignDataGridNavigator(bnv);
 
+            this.Text = "Ήξερες Ότι;";
+
             dgv.Size = new Size(1150, 300);
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
@@ -73,15 +75,17 @@ namespace YSMADataManagement
             if (e.RowIndex > -1)
             {
                 CurrentRow = e.RowIndex;
-                //UpdateData();
+                
                 if (e.ColumnIndex == dgv.Columns["details"].Index)
                 {
+                    UpdateData();
+                    Reload();
                     frmDidYouKnowDetails frm = new frmDidYouKnowDetails();
-                    frm.dykid = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
+                    frm.dykid = Convert.ToInt16(dgv.Rows[CurrentRow].Cells["dataGridViewTextBoxColumn1"].Value);
                     frm.callingForm = this;
                     //frm.dgv = dgv;
                     //frm.SelectedRow = CurrentRow;
-                    frm.dykImg = dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
+                    frm.dykImg = dgv.Rows[CurrentRow].Cells["dataGridViewTextBoxColumn7"].Value.ToString();
                     frm.Show();
                 }
             }
@@ -89,14 +93,40 @@ namespace YSMADataManagement
 
         public void UpdateData()
         {
+           
             this.Validate();
             this.didyouknowBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
+            
         }
 
         public void Reload()
         {
             this.didyouknowTableAdapter.Fill(this.ancienttempledbDataSet.didyouknow, this.gameid);
+        }     
+
+        private void didyouknowDataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >-1)
+            {
+                if (dgv != null)
+                {
+                    if (dgv.Rows != null)
+                    {
+                        if (dgv.Rows[e.RowIndex] != null)
+                        {
+                            if (dgv.Rows[e.RowIndex].Cells != null)
+                            {
+                                if (dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn2"] != null)
+                                {
+                                    dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn2"].Value = this.gameid.ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

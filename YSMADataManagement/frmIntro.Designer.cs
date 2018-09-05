@@ -87,17 +87,20 @@
             // gameidLabel
             // 
             gameidLabel.AutoSize = true;
-            gameidLabel.Location = new System.Drawing.Point(8, 138);
+            gameidLabel.Location = new System.Drawing.Point(40, 129);
+            gameidLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gameidLabel.Name = "gameidLabel";
-            gameidLabel.Size = new System.Drawing.Size(44, 13);
+            gameidLabel.Size = new System.Drawing.Size(63, 17);
             gameidLabel.TabIndex = 3;
             gameidLabel.Text = "gameid:";
+            gameidLabel.Visible = false;
             // 
             // gamecodenameLabel
             // 
             gamecodenameLabel.AutoSize = true;
             gamecodenameLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamecodenameLabel.Location = new System.Drawing.Point(8, 218);
+            gamecodenameLabel.Location = new System.Drawing.Point(11, 199);
+            gamecodenameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamecodenameLabel.Name = "gamecodenameLabel";
             gamecodenameLabel.Size = new System.Drawing.Size(132, 19);
             gamecodenameLabel.TabIndex = 5;
@@ -107,7 +110,8 @@
             // 
             gamename_grLabel.AutoSize = true;
             gamename_grLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamename_grLabel.Location = new System.Drawing.Point(8, 244);
+            gamename_grLabel.Location = new System.Drawing.Point(11, 233);
+            gamename_grLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamename_grLabel.Name = "gamename_grLabel";
             gamename_grLabel.Size = new System.Drawing.Size(112, 19);
             gamename_grLabel.TabIndex = 7;
@@ -117,7 +121,8 @@
             // 
             gamename_enLabel.AutoSize = true;
             gamename_enLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamename_enLabel.Location = new System.Drawing.Point(538, 247);
+            gamename_enLabel.Location = new System.Drawing.Point(717, 237);
+            gamename_enLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamename_enLabel.Name = "gamename_enLabel";
             gamename_enLabel.Size = new System.Drawing.Size(117, 19);
             gamename_enLabel.TabIndex = 9;
@@ -127,7 +132,8 @@
             // 
             gametitle_grLabel.AutoSize = true;
             gametitle_grLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gametitle_grLabel.Location = new System.Drawing.Point(8, 270);
+            gametitle_grLabel.Location = new System.Drawing.Point(11, 267);
+            gametitle_grLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gametitle_grLabel.Name = "gametitle_grLabel";
             gametitle_grLabel.Size = new System.Drawing.Size(96, 19);
             gametitle_grLabel.TabIndex = 11;
@@ -137,7 +143,8 @@
             // 
             gametitle_enLabel.AutoSize = true;
             gametitle_enLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gametitle_enLabel.Location = new System.Drawing.Point(538, 276);
+            gametitle_enLabel.Location = new System.Drawing.Point(717, 275);
+            gametitle_enLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gametitle_enLabel.Name = "gametitle_enLabel";
             gametitle_enLabel.Size = new System.Drawing.Size(101, 19);
             gametitle_enLabel.TabIndex = 13;
@@ -147,7 +154,8 @@
             // 
             gameiconLabel.AutoSize = true;
             gameiconLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gameiconLabel.Location = new System.Drawing.Point(12, 192);
+            gameiconLabel.Location = new System.Drawing.Point(16, 165);
+            gameiconLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gameiconLabel.Name = "gameiconLabel";
             gameiconLabel.Size = new System.Drawing.Size(84, 19);
             gameiconLabel.TabIndex = 15;
@@ -157,7 +165,8 @@
             // 
             gameintro_grLabel.AutoSize = true;
             gameintro_grLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gameintro_grLabel.Location = new System.Drawing.Point(8, 296);
+            gameintro_grLabel.Location = new System.Drawing.Point(237, 309);
+            gameintro_grLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gameintro_grLabel.Name = "gameintro_grLabel";
             gameintro_grLabel.Size = new System.Drawing.Size(101, 19);
             gameintro_grLabel.TabIndex = 17;
@@ -167,7 +176,8 @@
             // 
             gameintro_enLabel.AutoSize = true;
             gameintro_enLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gameintro_enLabel.Location = new System.Drawing.Point(538, 302);
+            gameintro_enLabel.Location = new System.Drawing.Point(863, 309);
+            gameintro_enLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gameintro_enLabel.Name = "gameintro_enLabel";
             gameintro_enLabel.Size = new System.Drawing.Size(106, 19);
             gameintro_enLabel.TabIndex = 19;
@@ -177,7 +187,8 @@
             // 
             gamecharLabel.AutoSize = true;
             gamecharLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamecharLabel.Location = new System.Drawing.Point(8, 468);
+            gamecharLabel.Location = new System.Drawing.Point(11, 612);
+            gamecharLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamecharLabel.Name = "gamecharLabel";
             gamecharLabel.Size = new System.Drawing.Size(86, 19);
             gamecharLabel.TabIndex = 21;
@@ -187,7 +198,8 @@
             // 
             gamecharname_grLabel.AutoSize = true;
             gamecharname_grLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamecharname_grLabel.Location = new System.Drawing.Point(8, 497);
+            gamecharname_grLabel.Location = new System.Drawing.Point(11, 571);
+            gamecharname_grLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamecharname_grLabel.Name = "gamecharname_grLabel";
             gamecharname_grLabel.Size = new System.Drawing.Size(144, 19);
             gamecharname_grLabel.TabIndex = 23;
@@ -197,7 +209,8 @@
             // 
             gamecharname_enLabel.AutoSize = true;
             gamecharname_enLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamecharname_enLabel.Location = new System.Drawing.Point(538, 503);
+            gamecharname_enLabel.Location = new System.Drawing.Point(717, 579);
+            gamecharname_enLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamecharname_enLabel.Name = "gamecharname_enLabel";
             gamecharname_enLabel.Size = new System.Drawing.Size(149, 19);
             gamecharname_enLabel.TabIndex = 25;
@@ -207,7 +220,8 @@
             // 
             gamecharintro_grLabel.AutoSize = true;
             gamecharintro_grLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamecharintro_grLabel.Location = new System.Drawing.Point(8, 523);
+            gamecharintro_grLabel.Location = new System.Drawing.Point(11, 605);
+            gamecharintro_grLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamecharintro_grLabel.Name = "gamecharintro_grLabel";
             gamecharintro_grLabel.Size = new System.Drawing.Size(133, 19);
             gamecharintro_grLabel.TabIndex = 27;
@@ -217,7 +231,8 @@
             // 
             gamecharintro_enLabel.AutoSize = true;
             gamecharintro_enLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            gamecharintro_enLabel.Location = new System.Drawing.Point(538, 529);
+            gamecharintro_enLabel.Location = new System.Drawing.Point(717, 613);
+            gamecharintro_enLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             gamecharintro_enLabel.Name = "gamecharintro_enLabel";
             gamecharintro_enLabel.Size = new System.Drawing.Size(138, 19);
             gamecharintro_enLabel.TabIndex = 29;
@@ -240,7 +255,13 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
+            this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = this.gamesTableAdapter;
+            this.tableAdapterManager.geography_questionsTableAdapter = null;
+            this.tableAdapterManager.geography_questionTableAdapter = null;
+            this.tableAdapterManager.geography_templesTableAdapter = null;
+            this.tableAdapterManager.playersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // gamesBindingNavigator
@@ -251,14 +272,14 @@
             this.gamesBindingNavigator.DeleteItem = null;
             this.gamesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gamesBindingNavigatorSaveItem});
-            this.gamesBindingNavigator.Location = new System.Drawing.Point(0, 107);
+            this.gamesBindingNavigator.Location = new System.Drawing.Point(0, 97);
             this.gamesBindingNavigator.MoveFirstItem = null;
             this.gamesBindingNavigator.MoveLastItem = null;
             this.gamesBindingNavigator.MoveNextItem = null;
             this.gamesBindingNavigator.MovePreviousItem = null;
             this.gamesBindingNavigator.Name = "gamesBindingNavigator";
             this.gamesBindingNavigator.PositionItem = null;
-            this.gamesBindingNavigator.Size = new System.Drawing.Size(1097, 25);
+            this.gamesBindingNavigator.Size = new System.Drawing.Size(1370, 25);
             this.gamesBindingNavigator.TabIndex = 1;
             this.gamesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -274,138 +295,153 @@
             // gameidTextBox
             // 
             this.gameidTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gameid", true));
-            this.gameidTextBox.Location = new System.Drawing.Point(112, 135);
+            this.gameidTextBox.Location = new System.Drawing.Point(178, 126);
+            this.gameidTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gameidTextBox.Name = "gameidTextBox";
-            this.gameidTextBox.Size = new System.Drawing.Size(100, 20);
+            this.gameidTextBox.Size = new System.Drawing.Size(132, 23);
             this.gameidTextBox.TabIndex = 4;
+            this.gameidTextBox.Visible = false;
             // 
             // gamecodenameTextBox
             // 
             this.gamecodenameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamecodename", true));
             this.gamecodenameTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamecodenameTextBox.Location = new System.Drawing.Point(174, 218);
+            this.gamecodenameTextBox.Location = new System.Drawing.Point(232, 199);
+            this.gamecodenameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamecodenameTextBox.Name = "gamecodenameTextBox";
-            this.gamecodenameTextBox.Size = new System.Drawing.Size(100, 24);
+            this.gamecodenameTextBox.Size = new System.Drawing.Size(132, 24);
             this.gamecodenameTextBox.TabIndex = 6;
             // 
             // gamename_grTextBox
             // 
             this.gamename_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamename_gr", true));
             this.gamename_grTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamename_grTextBox.Location = new System.Drawing.Point(174, 244);
+            this.gamename_grTextBox.Location = new System.Drawing.Point(232, 233);
+            this.gamename_grTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamename_grTextBox.Name = "gamename_grTextBox";
-            this.gamename_grTextBox.Size = new System.Drawing.Size(196, 24);
+            this.gamename_grTextBox.Size = new System.Drawing.Size(260, 24);
             this.gamename_grTextBox.TabIndex = 8;
             // 
             // gamename_enTextBox
             // 
             this.gamename_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamename_en", true));
             this.gamename_enTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamename_enTextBox.Location = new System.Drawing.Point(707, 244);
+            this.gamename_enTextBox.Location = new System.Drawing.Point(867, 237);
+            this.gamename_enTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamename_enTextBox.Name = "gamename_enTextBox";
-            this.gamename_enTextBox.Size = new System.Drawing.Size(174, 24);
+            this.gamename_enTextBox.Size = new System.Drawing.Size(231, 24);
             this.gamename_enTextBox.TabIndex = 10;
             // 
             // gametitle_grTextBox
             // 
             this.gametitle_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gametitle_gr", true));
             this.gametitle_grTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gametitle_grTextBox.Location = new System.Drawing.Point(174, 270);
+            this.gametitle_grTextBox.Location = new System.Drawing.Point(232, 267);
+            this.gametitle_grTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gametitle_grTextBox.Name = "gametitle_grTextBox";
-            this.gametitle_grTextBox.Size = new System.Drawing.Size(196, 24);
+            this.gametitle_grTextBox.Size = new System.Drawing.Size(260, 24);
             this.gametitle_grTextBox.TabIndex = 12;
             // 
             // gametitle_enTextBox
             // 
             this.gametitle_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gametitle_en", true));
             this.gametitle_enTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gametitle_enTextBox.Location = new System.Drawing.Point(707, 273);
+            this.gametitle_enTextBox.Location = new System.Drawing.Point(867, 267);
+            this.gametitle_enTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gametitle_enTextBox.Name = "gametitle_enTextBox";
-            this.gametitle_enTextBox.Size = new System.Drawing.Size(174, 24);
+            this.gametitle_enTextBox.Size = new System.Drawing.Size(231, 24);
             this.gametitle_enTextBox.TabIndex = 14;
             // 
             // gameiconTextBox
             // 
             this.gameiconTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gameicon", true));
             this.gameiconTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gameiconTextBox.Location = new System.Drawing.Point(174, 192);
+            this.gameiconTextBox.Location = new System.Drawing.Point(232, 165);
+            this.gameiconTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gameiconTextBox.Name = "gameiconTextBox";
-            this.gameiconTextBox.Size = new System.Drawing.Size(100, 24);
+            this.gameiconTextBox.Size = new System.Drawing.Size(132, 24);
             this.gameiconTextBox.TabIndex = 16;
             // 
             // gameintro_grTextBox
             // 
             this.gameintro_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gameintro_gr", true));
             this.gameintro_grTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gameintro_grTextBox.Location = new System.Drawing.Point(174, 296);
+            this.gameintro_grTextBox.Location = new System.Drawing.Point(232, 332);
+            this.gameintro_grTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gameintro_grTextBox.Multiline = true;
             this.gameintro_grTextBox.Name = "gameintro_grTextBox";
             this.gameintro_grTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gameintro_grTextBox.Size = new System.Drawing.Size(345, 166);
+            this.gameintro_grTextBox.Size = new System.Drawing.Size(459, 188);
             this.gameintro_grTextBox.TabIndex = 18;
             // 
             // gameintro_enTextBox
             // 
             this.gameintro_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gameintro_en", true));
             this.gameintro_enTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gameintro_enTextBox.Location = new System.Drawing.Point(707, 299);
+            this.gameintro_enTextBox.Location = new System.Drawing.Point(867, 332);
+            this.gameintro_enTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gameintro_enTextBox.Multiline = true;
             this.gameintro_enTextBox.Name = "gameintro_enTextBox";
             this.gameintro_enTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gameintro_enTextBox.Size = new System.Drawing.Size(378, 163);
+            this.gameintro_enTextBox.Size = new System.Drawing.Size(490, 188);
             this.gameintro_enTextBox.TabIndex = 20;
             // 
             // gamecharTextBox
             // 
             this.gamecharTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamechar", true));
             this.gamecharTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamecharTextBox.Location = new System.Drawing.Point(174, 468);
+            this.gamecharTextBox.Location = new System.Drawing.Point(232, 533);
+            this.gamecharTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamecharTextBox.Name = "gamecharTextBox";
-            this.gamecharTextBox.Size = new System.Drawing.Size(100, 24);
+            this.gamecharTextBox.Size = new System.Drawing.Size(132, 24);
             this.gamecharTextBox.TabIndex = 22;
             // 
             // gamecharname_grTextBox
             // 
             this.gamecharname_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamecharname_gr", true));
             this.gamecharname_grTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamecharname_grTextBox.Location = new System.Drawing.Point(174, 497);
+            this.gamecharname_grTextBox.Location = new System.Drawing.Point(232, 571);
+            this.gamecharname_grTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamecharname_grTextBox.Name = "gamecharname_grTextBox";
-            this.gamecharname_grTextBox.Size = new System.Drawing.Size(100, 24);
+            this.gamecharname_grTextBox.Size = new System.Drawing.Size(132, 24);
             this.gamecharname_grTextBox.TabIndex = 24;
             // 
             // gamecharname_enTextBox
             // 
             this.gamecharname_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamecharname_en", true));
             this.gamecharname_enTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamecharname_enTextBox.Location = new System.Drawing.Point(707, 500);
+            this.gamecharname_enTextBox.Location = new System.Drawing.Point(867, 581);
+            this.gamecharname_enTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamecharname_enTextBox.Name = "gamecharname_enTextBox";
-            this.gamecharname_enTextBox.Size = new System.Drawing.Size(100, 24);
+            this.gamecharname_enTextBox.Size = new System.Drawing.Size(132, 24);
             this.gamecharname_enTextBox.TabIndex = 26;
             // 
             // gamecharintro_grTextBox
             // 
             this.gamecharintro_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamecharintro_gr", true));
             this.gamecharintro_grTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamecharintro_grTextBox.Location = new System.Drawing.Point(174, 523);
+            this.gamecharintro_grTextBox.Location = new System.Drawing.Point(232, 605);
+            this.gamecharintro_grTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamecharintro_grTextBox.Multiline = true;
             this.gamecharintro_grTextBox.Name = "gamecharintro_grTextBox";
-            this.gamecharintro_grTextBox.Size = new System.Drawing.Size(345, 113);
+            this.gamecharintro_grTextBox.Size = new System.Drawing.Size(459, 131);
             this.gamecharintro_grTextBox.TabIndex = 28;
             // 
             // gamecharintro_enTextBox
             // 
             this.gamecharintro_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "gamecharintro_en", true));
             this.gamecharintro_enTextBox.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gamecharintro_enTextBox.Location = new System.Drawing.Point(707, 526);
+            this.gamecharintro_enTextBox.Location = new System.Drawing.Point(867, 613);
+            this.gamecharintro_enTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gamecharintro_enTextBox.Multiline = true;
             this.gamecharintro_enTextBox.Name = "gamecharintro_enTextBox";
-            this.gamecharintro_enTextBox.Size = new System.Drawing.Size(378, 110);
+            this.gamecharintro_enTextBox.Size = new System.Drawing.Size(490, 127);
             this.gamecharintro_enTextBox.TabIndex = 30;
             // 
             // frmIntro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1097, 648);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(gameidLabel);
             this.Controls.Add(this.gameidTextBox);
             this.Controls.Add(gamecodenameLabel);
@@ -435,6 +471,7 @@
             this.Controls.Add(gamecharintro_enLabel);
             this.Controls.Add(this.gamecharintro_enTextBox);
             this.Controls.Add(this.gamesBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIntro";
             this.Load += new System.EventHandler(this.frmIntro_Load);
             this.Controls.SetChildIndex(this.gamesBindingNavigator, 0);

@@ -18,9 +18,11 @@ namespace YSMADataManagement
         public int templeID;
         public string imageFile;
         public string newImageFile;
-        public frmGeographyTemples callingForm;
+        public frmGeographyTemples2 callingGeographyTemples;
         public frmGeographyQuestion callingQuestionDetails;
         public frmDidYouKnowDetails callingDidYouKnowDetails;
+        public frmActivity callingActivity;
+        public frmActivites callingActivites;
         public DataGridView dgv;
         public int SelectedRow;
 
@@ -37,6 +39,7 @@ namespace YSMADataManagement
             this.button2.Visible = false;
             this.button3.Visible = false;
             this.label1.Visible = false;
+            this.label2.Visible = false;
             
             ShowImage();
         }
@@ -47,7 +50,19 @@ namespace YSMADataManagement
             {               
                 if (imageFile.Contains("jpg") || imageFile.Contains("png") )
                 {
+
+
                     string webImageFolder = Paths.webFolderPath;
+                    
+                    if (this.callingActivity != null || this.callingActivites !=null)
+                    {
+                        webImageFolder = Paths.webConstructionFolderPath;
+                    }
+                    else
+                    {
+                        webImageFolder = Paths.webFolderPath;
+                    }
+
                     HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webImageFolder + imageFile);
                     myRequest.Method = "GET";
                     try
@@ -55,7 +70,8 @@ namespace YSMADataManagement
                         using (HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse())
                         {
                             System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(myResponse.GetResponseStream());
-                            this.pictureBox2.Image = bmp;                          
+                            this.pictureBox2.Image = bmp;
+                            label2.Visible = true;                          
                             label2.Text = "Αρχείο:" + imageFile + " Διαστάσεις:" + bmp.Width.ToString() + " x " + bmp.Height.ToString() + " ";
                         }
                     }
@@ -79,6 +95,7 @@ namespace YSMADataManagement
         {
             this.pictureBox2.AllowDrop = true;
             //this.pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            this.label1.Visible = true;
             this.label1.Text = "Σύρετε τη φωτογραφία...";
             this.button1.Visible = false;
             this.button2.Visible = true;
@@ -133,7 +150,7 @@ namespace YSMADataManagement
             string ps = "!giannisftp$1";
             string filePath = newImageFile;
             string serverPath="";
-            if (this.callingForm!=null || this.callingQuestionDetails != null)
+            if (this.callingGeographyTemples!=null || this.callingQuestionDetails != null)
             {
                 serverPath= Paths.ftpFolderPath;
             }
@@ -141,7 +158,10 @@ namespace YSMADataManagement
             {
                 serverPath = Paths.didYouKnowFolderPath;
             }
-            
+            else if (this.callingActivity!=null || this.callingActivites !=null)
+            {
+                serverPath = Paths.constuctionFolderPath;
+            }
             
             
             try
@@ -242,20 +262,33 @@ namespace YSMADataManagement
 
             //------------------                    
 
-            if (callingForm != null)
+            if (this.callingGeographyTemples != null)
             {
                 dgv.Rows[SelectedRow].Cells[5].Value = f;
-                callingForm.UpdateData();
+                this.callingGeographyTemples.ShowImages();
             }
             else if (callingQuestionDetails != null)
             {
                 callingQuestionDetails.feedbackImg = f;
+                callingQuestionDetails.feedbackImgTxt.Text = f;
                 callingQuestionDetails.ShowImages();
             }
             else if (callingDidYouKnowDetails!=null)
             {
                 callingDidYouKnowDetails.dykImg = f;
                 callingDidYouKnowDetails.ShowImage();
+            }
+            else if (callingActivity != null)
+            {
+                //callingActivity.activityImg = f;
+                callingActivity.Controls["activity_imageTextBox"].Text = f;
+                callingActivity.UpdateData();
+            } else if (callingActivites != null)
+            {
+                callingActivites.dgv.Rows[callingActivites.CurrentRow].Cells["dataGridViewTextBoxColumn5"].Value = f;
+                callingActivites.UpdateData();
+                callingActivites.Reload();
+
             }
             this.Close();         
 

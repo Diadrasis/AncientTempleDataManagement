@@ -15,17 +15,53 @@ namespace YSMADataManagement
             InitializeComponent();
         }
 
+        private void frmDidYouKnowMenu_Load(object sender, EventArgs e)
+        {
+            this.Size = new Size(1100, 700);
+            this.Text = "Ήξερες Ότι...";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
             frm.gameid = 2;
             frm.Show();
+        }       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmDidYouKnow frm = new frmDidYouKnow();
+            frm.gameid = 6;
+            frm.Show();
+
         }
 
-        private void frmDidYouKnowMenu_Load(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(1100, 700);
-            this.Text = "Ήξερες Ότι...";
+            frmDidYouKnow frm = new frmDidYouKnow();
+            frm.gameid = 4;
+            frm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmDidYouKnow frm = new frmDidYouKnow();
+            frm.gameid = 1;
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmDidYouKnow frm = new frmDidYouKnow();
+            frm.gameid = 3;
+            frm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmDidYouKnow frm = new frmDidYouKnow();
+            frm.gameid = 5;
+            frm.Show();
         }
     }
 }

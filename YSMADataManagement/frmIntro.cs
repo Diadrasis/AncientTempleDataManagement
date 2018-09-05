@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace YSMADataManagement
 {
-    public partial class frmIntro : YSMADataManagement.Form1
+    public partial class frmIntro : YSMADataManagement.frmTemplate
     {
         public int gameid;
         public frmIntro()
@@ -34,6 +34,7 @@ namespace YSMADataManagement
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
         }
     }
 }

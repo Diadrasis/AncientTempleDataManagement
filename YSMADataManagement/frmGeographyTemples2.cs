@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace YSMADataManagement
 {
-    public partial class frmGeographyTemples : YSMADataManagement.frmTemplate
+    public partial class frmGeographyTemples2 : YSMADataManagement.frmTemplate
     {
         public DataGridView dgv;
         BindingNavigator bnv;
         public int CurrentRow;
 
-        public frmGeographyTemples()
+        public frmGeographyTemples2()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace YSMADataManagement
             UpdateData();
         }
 
-        private void frmGeographyTemples_Load(object sender, EventArgs e)
+        private void frmGeogrpahyTemples2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_temples' table. You can move, or remove it, as needed.
             this.geography_templesTableAdapter.Fill(this.ancienttempledbDataSet.geography_temples);
@@ -61,12 +61,12 @@ namespace YSMADataManagement
             dgv.Columns["previewImg"].HeaderText = "Προεπισκόπιση";
             dgv.Columns["previewImg"].Width = 170;
 
-            //foreach (DataGridViewRow row in dgv.Rows)
-            //{
-                //row.Height = 60;
-            //}
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                row.Height = 60;
+            }
 
-            //ShowPreviewImages();
+            ShowImages();
 
         }
 
@@ -79,7 +79,7 @@ namespace YSMADataManagement
 
                 if (row.Cells["dataGridViewTextBoxColumn4"].Value != DBNull.Value)
                 {
-                    String file = row.Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+                    String file = row.Cells["dataGridViewTextBoxColumn4"].Value.ToString();                   
                     HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webImageFolder + file);
                     myRequest.Method = "GET";
                     try
@@ -97,30 +97,11 @@ namespace YSMADataManagement
                 }
                 else
                 {
-                    row.Cells["previewImg"].Value = Properties.Resources.imgNotFound; ;
+                    row.Cells["previewImg"].Value = Properties.Resources.imgNotFound;
                 }
             }
 
             this.Enabled = true;
-        }
-
-        private void geography_templesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1)
-            {
-                CurrentRow = e.RowIndex;
-                UpdateData();
-                if (e.ColumnIndex == dgv.Columns["previewImg"].Index)
-                {
-                    frmImage frm = new frmImage();
-                    frm.templeID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
-                    //frm.callingForm = this;
-                    frm.dgv = dgv;
-                    frm.SelectedRow = CurrentRow;
-                    frm.imageFile = dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
-                    frm.Show();
-                }
-            }
         }
 
         public void UpdateData()
@@ -130,5 +111,24 @@ namespace YSMADataManagement
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
             ShowImages();
         }
-    }       
+
+        private void geography_templesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {                
+                if (e.ColumnIndex == dgv.Columns["previewImg"].Index)
+                {
+                    frmImage frm = new frmImage();
+                    frm.templeID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
+                    CurrentRow = e.RowIndex;
+                    frm.callingGeographyTemples = this;
+                    frm.dgv = dgv;
+                    frm.SelectedRow = CurrentRow;
+                    frm.imageFile = dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value.ToString();
+                    frm.Show();
+                    UpdateData();
+                }
+            }
+        }
+    }
 }

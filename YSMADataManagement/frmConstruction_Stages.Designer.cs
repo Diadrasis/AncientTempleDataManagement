@@ -1,6 +1,6 @@
 ﻿namespace YSMADataManagement
 {
-    partial class frmDidYouKnow
+    partial class frmConstruction_Stages
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDidYouKnow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConstruction_Stages));
             this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
-            this.didyouknowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.didyouknowTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.didyouknowTableAdapter();
+            this.construction_stagesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.construction_stagesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.construction_stagesTableAdapter();
             this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
-            this.didyouknowBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.construction_stagesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,21 +46,17 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.didyouknowBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.didyouknowDataGridView = new System.Windows.Forms.DataGridView();
+            this.construction_stagesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.construction_stagesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.details = new System.Windows.Forms.DataGridViewImageColumn();
+            this.activites = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingNavigator)).BeginInit();
-            this.didyouknowBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construction_stagesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construction_stagesBindingNavigator)).BeginInit();
+            this.construction_stagesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.construction_stagesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // ancienttempledbDataSet
@@ -68,20 +64,22 @@
             this.ancienttempledbDataSet.DataSetName = "ancienttempledbDataSet";
             this.ancienttempledbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // didyouknowBindingSource
+            // construction_stagesBindingSource
             // 
-            this.didyouknowBindingSource.DataMember = "didyouknow";
-            this.didyouknowBindingSource.DataSource = this.ancienttempledbDataSet;
+            this.construction_stagesBindingSource.DataMember = "construction_stages";
+            this.construction_stagesBindingSource.DataSource = this.ancienttempledbDataSet;
             // 
-            // didyouknowTableAdapter
+            // construction_stagesTableAdapter
             // 
-            this.didyouknowTableAdapter.ClearBeforeFill = true;
+            this.construction_stagesTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.construction_activitiesTableAdapter = null;
+            this.tableAdapterManager.construction_stagesTableAdapter = this.construction_stagesTableAdapter;
             this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
-            this.tableAdapterManager.didyouknowTableAdapter = this.didyouknowTableAdapter;
+            this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
             this.tableAdapterManager.geography_questionTableAdapter = null;
@@ -89,13 +87,13 @@
             this.tableAdapterManager.playersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // didyouknowBindingNavigator
+            // construction_stagesBindingNavigator
             // 
-            this.didyouknowBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.didyouknowBindingNavigator.BindingSource = this.didyouknowBindingSource;
-            this.didyouknowBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.didyouknowBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.didyouknowBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.construction_stagesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.construction_stagesBindingNavigator.BindingSource = this.construction_stagesBindingSource;
+            this.construction_stagesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.construction_stagesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.construction_stagesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -107,17 +105,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.didyouknowBindingNavigatorSaveItem});
-            this.didyouknowBindingNavigator.Location = new System.Drawing.Point(0, 97);
-            this.didyouknowBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.didyouknowBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.didyouknowBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.didyouknowBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.didyouknowBindingNavigator.Name = "didyouknowBindingNavigator";
-            this.didyouknowBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.didyouknowBindingNavigator.Size = new System.Drawing.Size(1273, 25);
-            this.didyouknowBindingNavigator.TabIndex = 1;
-            this.didyouknowBindingNavigator.Text = "bindingNavigator1";
+            this.construction_stagesBindingNavigatorSaveItem});
+            this.construction_stagesBindingNavigator.Location = new System.Drawing.Point(0, 97);
+            this.construction_stagesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.construction_stagesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.construction_stagesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.construction_stagesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.construction_stagesBindingNavigator.Name = "construction_stagesBindingNavigator";
+            this.construction_stagesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.construction_stagesBindingNavigator.Size = new System.Drawing.Size(1273, 25);
+            this.construction_stagesBindingNavigator.TabIndex = 1;
+            this.construction_stagesBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -204,101 +202,71 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // didyouknowBindingNavigatorSaveItem
+            // construction_stagesBindingNavigatorSaveItem
             // 
-            this.didyouknowBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.didyouknowBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("didyouknowBindingNavigatorSaveItem.Image")));
-            this.didyouknowBindingNavigatorSaveItem.Name = "didyouknowBindingNavigatorSaveItem";
-            this.didyouknowBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.didyouknowBindingNavigatorSaveItem.Text = "Save Data";
-            this.didyouknowBindingNavigatorSaveItem.Click += new System.EventHandler(this.didyouknowBindingNavigatorSaveItem_Click);
+            this.construction_stagesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.construction_stagesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("construction_stagesBindingNavigatorSaveItem.Image")));
+            this.construction_stagesBindingNavigatorSaveItem.Name = "construction_stagesBindingNavigatorSaveItem";
+            this.construction_stagesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.construction_stagesBindingNavigatorSaveItem.Text = "Save Data";
+            this.construction_stagesBindingNavigatorSaveItem.Click += new System.EventHandler(this.construction_stagesBindingNavigatorSaveItem_Click);
             // 
-            // didyouknowDataGridView
+            // construction_stagesDataGridView
             // 
-            this.didyouknowDataGridView.AutoGenerateColumns = false;
-            this.didyouknowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.didyouknowDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.construction_stagesDataGridView.AutoGenerateColumns = false;
+            this.construction_stagesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.construction_stagesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.details});
-            this.didyouknowDataGridView.DataSource = this.didyouknowBindingSource;
-            this.didyouknowDataGridView.Location = new System.Drawing.Point(43, 164);
-            this.didyouknowDataGridView.MultiSelect = false;
-            this.didyouknowDataGridView.Name = "didyouknowDataGridView";
-            this.didyouknowDataGridView.Size = new System.Drawing.Size(830, 220);
-            this.didyouknowDataGridView.TabIndex = 3;
-            this.didyouknowDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.didyouknowDataGridView_CellContentClick);           
-            this.didyouknowDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.didyouknowDataGridView_RowEnter);
+            this.activites});
+            this.construction_stagesDataGridView.DataSource = this.construction_stagesBindingSource;
+            this.construction_stagesDataGridView.Location = new System.Drawing.Point(150, 157);
+            this.construction_stagesDataGridView.Name = "construction_stagesDataGridView";
+            this.construction_stagesDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.construction_stagesDataGridView.TabIndex = 2;
+            this.construction_stagesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.construction_stagesDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "dykid";
-            this.dataGridViewTextBoxColumn1.HeaderText = "dykid";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "stage_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "stage_id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "gameid";
-            this.dataGridViewTextBoxColumn2.HeaderText = "gameid";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "stage_name_gr";
+            this.dataGridViewTextBoxColumn2.HeaderText = "stage_name_gr";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "questiontext_gr";
-            this.dataGridViewTextBoxColumn3.HeaderText = "questiontext_gr";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "stage_name_en";
+            this.dataGridViewTextBoxColumn3.HeaderText = "stage_name_en";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn4
+            // activites
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "questiontext_en";
-            this.dataGridViewTextBoxColumn4.HeaderText = "questiontext_en";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.activites.HeaderText = "Activites";
+            this.activites.Image = global::YSMADataManagement.Properties.Resources.activities_icon;
+            this.activites.Name = "activites";
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "answertext_gr";
-            this.dataGridViewTextBoxColumn5.HeaderText = "answertext_gr";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "answertext_en";
-            this.dataGridViewTextBoxColumn6.HeaderText = "answertext_en";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "imagefile";
-            this.dataGridViewTextBoxColumn7.HeaderText = "imagefile";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // details
-            // 
-            this.details.HeaderText = "Details";
-            this.details.Image = global::YSMADataManagement.Properties.Resources.details;
-            this.details.Name = "details";
-            // 
-            // frmDidYouKnow
+            // frmConstruction_Stages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.ClientSize = new System.Drawing.Size(1273, 846);
-            this.Controls.Add(this.didyouknowDataGridView);
-            this.Controls.Add(this.didyouknowBindingNavigator);
-            this.Name = "frmDidYouKnow";
-            this.Load += new System.EventHandler(this.frmDidYouKnow_Load);
-            this.Controls.SetChildIndex(this.didyouknowBindingNavigator, 0);
-            this.Controls.SetChildIndex(this.didyouknowDataGridView, 0);
+            this.Controls.Add(this.construction_stagesDataGridView);
+            this.Controls.Add(this.construction_stagesBindingNavigator);
+            this.Name = "frmConstruction_Stages";
+            this.Load += new System.EventHandler(this.frmConstruction_Stages_Load);
+            this.Controls.SetChildIndex(this.construction_stagesBindingNavigator, 0);
+            this.Controls.SetChildIndex(this.construction_stagesDataGridView, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingNavigator)).EndInit();
-            this.didyouknowBindingNavigator.ResumeLayout(false);
-            this.didyouknowBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construction_stagesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construction_stagesBindingNavigator)).EndInit();
+            this.construction_stagesBindingNavigator.ResumeLayout(false);
+            this.construction_stagesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.construction_stagesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,10 +275,10 @@
         #endregion
 
         private ancienttempledbDataSet ancienttempledbDataSet;
-        private System.Windows.Forms.BindingSource didyouknowBindingSource;
-        private ancienttempledbDataSetTableAdapters.didyouknowTableAdapter didyouknowTableAdapter;
+        private System.Windows.Forms.BindingSource construction_stagesBindingSource;
+        private ancienttempledbDataSetTableAdapters.construction_stagesTableAdapter construction_stagesTableAdapter;
         private ancienttempledbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator didyouknowBindingNavigator;
+        private System.Windows.Forms.BindingNavigator construction_stagesBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -322,15 +290,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton didyouknowBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView didyouknowDataGridView;
+        private System.Windows.Forms.ToolStripButton construction_stagesBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView construction_stagesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewImageColumn details;
+        private System.Windows.Forms.DataGridViewImageColumn activites;
     }
 }
