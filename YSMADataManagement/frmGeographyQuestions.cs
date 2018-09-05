@@ -26,10 +26,7 @@ namespace YSMADataManagement
 
         private void frmGeographyQuestions_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_temples' table. You can move, or remove it, as needed.
-            this.geography_templesTableAdapter.Fill(this.ancienttempledbDataSet.geography_temples);
-            // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_questions' table. You can move, or remove it, as needed.
-            this.geography_questionsTableAdapter.Fill(this.ancienttempledbDataSet.geography_questions);
+           
 
             dgv = this.geography_questionsDataGridView;
             bnv = this.geography_questionsBindingNavigator;
@@ -53,7 +50,7 @@ namespace YSMADataManagement
             dgv.Columns["dataGridViewTextBoxColumn4"].HeaderText = "Ναός";
             dgv.Columns["dataGridViewTextBoxColumn4"].Width = 200;
 
-            dgv.Columns["templeFile"].Visible=false;
+            dgv.Columns["temple_file"].Visible=false;
            
 
             dgv.Columns["dataGridViewTextBoxColumn5"].HeaderText = "Ανάδραση (el)";
@@ -62,10 +59,13 @@ namespace YSMADataManagement
             dgv.Columns["dataGridViewTextBoxColumn6"].HeaderText = "Ανάδραση (en)";
             dgv.Columns["dataGridViewTextBoxColumn6"].Width = 160;
 
+            dgv.Columns["feedbackImg"].HeaderText = "Εικόνα Ανάδρασης";
+            dgv.Columns["feedbackImg"].Width = 160;
+
             dgv.Columns["details"].HeaderText = "";
             dgv.Columns["details"].Width = 70;
 
-
+            Reload();
 
         }
 
@@ -74,13 +74,14 @@ namespace YSMADataManagement
             if (e.RowIndex > -1)
             {
                 CurrentRow = e.RowIndex;
-                UpdateData();
+               
                 if (e.ColumnIndex == dgv.Columns["details"].Index)
                 {
+                    UpdateData();
                     frmGeographyQuestion frm = new frmGeographyQuestion();
                     frm.questionID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
                     frm.templeID= Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value);
-                    frm.templeImg= dgv.Rows[e.RowIndex].Cells["templeFile"].FormattedValue.ToString();
+                    //frm.templeImg= dgv.Rows[e.RowIndex].Cells["temple_file"].FormattedValue.ToString();
                     frm.feedbackImg= dgv.Rows[e.RowIndex].Cells["feedbackImg"].Value.ToString();
 
                     frm.callingForm = this;
@@ -102,8 +103,9 @@ namespace YSMADataManagement
         public void Reload()
         {
             // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_temples' table. You can move, or remove it, as needed.
-            this.geography_templesTableAdapter.Fill(this.ancienttempledbDataSet.geography_temples);
+            //this.geography_templesTableAdapter.Fill(this.ancienttempledbDataSet.geography_temples1);
             // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_questions' table. You can move, or remove it, as needed.
+            this.geography_temples1TableAdapter.Fill(this.ancienttempledbDataSet.geography_temples1);
             this.geography_questionsTableAdapter.Fill(this.ancienttempledbDataSet.geography_questions);
         }
     }

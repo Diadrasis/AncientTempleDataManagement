@@ -40,6 +40,12 @@ namespace YSMADataManagement
 
             this.Width = 1200;
             dgv.Size = new Size(1100, 400);
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                row.Height = 40;
+            }
+
             this.Text = "Στάδια Κατασκευής";
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;

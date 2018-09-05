@@ -18,7 +18,7 @@ namespace YSMADataManagement
         public int templeID;
         public string imageFile;
         public string newImageFile;
-        public frmGeographyTemples2 callingGeographyTemples;
+        public frmGeographyTemples3 callingGeographyTemples;
         public frmGeographyQuestion callingQuestionDetails;
         public frmDidYouKnowDetails callingDidYouKnowDetails;
         public frmActivity callingActivity;
@@ -72,7 +72,7 @@ namespace YSMADataManagement
                             System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(myResponse.GetResponseStream());
                             this.pictureBox2.Image = bmp;
                             label2.Visible = true;                          
-                            label2.Text = "Αρχείο:" + imageFile + " Διαστάσεις:" + bmp.Width.ToString() + " x " + bmp.Height.ToString() + " ";
+                            label2.Text = "Αρχείο: " + imageFile + "  Διαστάσεις: " + bmp.Width.ToString() + " x " + bmp.Height.ToString() + "  ";
                         }
                     }
                     catch
@@ -142,6 +142,10 @@ namespace YSMADataManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            this.button2.Enabled = false;
+            this.button3.Enabled = false;
+
             string f = newImageFile.Substring(newImageFile.LastIndexOf("\\") +1 );
             //dgv.Rows[SelectedRow].Cells[5].Value = f;  
             
@@ -174,6 +178,8 @@ namespace YSMADataManagement
                 DialogResult dialogResult = MessageBox.Show("Το αρχείο υπάρχει ήδη! Θέλετε να αντικατασταθεί;", "Some Title", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                  
+
                     responseExists.Close();
                     //LoadFile(serverPath, (NetworkCredential)requestExists.Credentials);
                     try
@@ -261,11 +267,14 @@ namespace YSMADataManagement
             }
 
             //------------------                    
+            this.button2.Enabled = false;
+            this.button3.Enabled = false;
 
             if (this.callingGeographyTemples != null)
             {
-                dgv.Rows[SelectedRow].Cells[5].Value = f;
-                this.callingGeographyTemples.ShowImages();
+                dgv.Rows[SelectedRow].Cells["dataGridViewTextBoxColumn4"].Value = f;
+                this.callingGeographyTemples.UpdateData();
+                this.callingGeographyTemples.ReloadData();
             }
             else if (callingQuestionDetails != null)
             {

@@ -80,5 +80,20 @@ namespace YSMADataManagement
                 this.playersBindingSource.RemoveFilter();
             }
         }
+
+        private void playersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                
+
+                if (e.ColumnIndex == dgv.Columns["score"].Index)
+                {                   
+                    frmScore frm = new frmScore();
+                    frm.player_id = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);                   
+                    frm.Show();
+                }
+            }
+        }
     }
 }

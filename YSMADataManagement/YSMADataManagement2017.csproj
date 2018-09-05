@@ -166,6 +166,12 @@
     <Compile Include="frmGeographyTemples2.Designer.cs">
       <DependentUpon>frmGeographyTemples2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGeographyTemples3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeographyTemples3.Designer.cs">
+      <DependentUpon>frmGeographyTemples3.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmImage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,12 @@
     </Compile>
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScore.Designer.cs">
+      <DependentUpon>frmScore.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTemplate.cs">
       <SubType>Form</SubType>
@@ -256,6 +268,9 @@
     <EmbeddedResource Include="frmGeographyTemples2.resx">
       <DependentUpon>frmGeographyTemples2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGeographyTemples3.resx">
+      <DependentUpon>frmGeographyTemples3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImage.resx">
       <DependentUpon>frmImage.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScore.resx">
+      <DependentUpon>frmScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTemplate.resx">
       <DependentUpon>frmTemplate.cs</DependentUpon>

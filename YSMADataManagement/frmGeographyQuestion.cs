@@ -16,7 +16,7 @@ namespace YSMADataManagement
         public int questionID;
         public int templeID;
         public frmGeographyQuestions callingForm;
-        public string templeImg;
+       // public string templeImg;
         public string feedbackImg;
         public TextBox feedbackImgTxt;
 
@@ -39,8 +39,10 @@ namespace YSMADataManagement
 
         private void frmGeographyQuestionDetails_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_temples1' table. You can move, or remove it, as needed.
+            this.geography_temples1TableAdapter.Fill(this.ancienttempledbDataSet.geography_temples1);
             // TODO: This line of code loads data into the 'ancienttempledbDataSet.geography_temples' table. You can move, or remove it, as needed.
-            this.geography_templesTableAdapter.Fill(this.ancienttempledbDataSet.geography_temples);
+            //this.geography_templesTableAdapter.Fill(this.ancienttempledbDataSet.geography_temples);
             try
             {
                 this.geography_questionTableAdapter.Fill(this.ancienttempledbDataSet.geography_question, questionID);
@@ -60,30 +62,8 @@ namespace YSMADataManagement
 
         public void ShowImages()
         {
-            string webImageFolder = Paths.webFolderPath;          
-
-            if (!String.IsNullOrEmpty(this.templeImg))
-            {
-                HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webImageFolder + templeImg);
-                myRequest.Method = "GET";
-                try
-                {
-                    using (HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse())
-                    {
-                        System.Drawing.Bitmap bmp = new System.Drawing.Bitmap(myResponse.GetResponseStream());
-                        this.pictureBox2.Image=(Image)bmp;
-                    }
-                }
-                catch
-                {
-                    this.pictureBox2.Image = Properties.Resources.imgNotFound;
-                }
-            }
-            else
-            {
-                this.pictureBox2.Image = Properties.Resources.imgNotFound;
-            }
-
+            string webImageFolder = Paths.webFolderPath;
+            feedbackImg = this.Controls["feedback_imgTextBox"].Text;
             if (!String.IsNullOrEmpty(this.feedbackImg))
             {
                 HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(webImageFolder + feedbackImg);
@@ -128,7 +108,7 @@ namespace YSMADataManagement
 
         private void templeidComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.pictureBox2.Image = null;
+            
         }
     }
 }

@@ -55,7 +55,7 @@ namespace YSMADataManagement
             dgv.Columns["dataGridViewTextBoxColumn5"].Width = 100;
 
             dgv.Columns["preview"].HeaderText = "Προεπισκόπιση";
-            dgv.Columns["preview"].Width = 100;
+            dgv.Columns["preview"].Width = 120;
 
 
             dgv.Columns["details"].HeaderText = "Περισσότερα";

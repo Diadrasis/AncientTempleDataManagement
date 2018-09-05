@@ -48,11 +48,10 @@
             this.feedbacktext_grTextBox = new System.Windows.Forms.TextBox();
             this.feedbacktext_enTextBox = new System.Windows.Forms.TextBox();
             this.templeidComboBox = new System.Windows.Forms.ComboBox();
-            this.geographytemplesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.geography_templesTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_templesTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.geographytemples1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.feedback_imgTextBox = new System.Windows.Forms.TextBox();
+            this.geography_temples1TableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.geography_temples1TableAdapter();
             questtext_grLabel = new System.Windows.Forms.Label();
             questtext_enLabel = new System.Windows.Forms.Label();
             templeidLabel = new System.Windows.Forms.Label();
@@ -63,8 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingNavigator)).BeginInit();
             this.geography_questionBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.geographytemplesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geographytemples1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +137,15 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.construction_activitiesTableAdapter = null;
+            this.tableAdapterManager.construction_activityTableAdapter = null;
+            this.tableAdapterManager.construction_stagesTableAdapter = null;
             this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
             this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
             this.tableAdapterManager.geography_questionTableAdapter = this.geography_questionTableAdapter;
+            this.tableAdapterManager.geography_temples1TableAdapter = null;
             this.tableAdapterManager.geography_templesTableAdapter = null;
             this.tableAdapterManager.playersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -223,39 +225,28 @@
             // templeidComboBox
             // 
             this.templeidComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.geography_questionBindingSource, "templeid", true));
-            this.templeidComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geographytemplesBindingSource, "templename_gr", true));
-            this.templeidComboBox.DataSource = this.geographytemplesBindingSource;
+            this.templeidComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.geographytemples1BindingSource, "templename_gr", true));
+            this.templeidComboBox.DataSource = this.geographytemples1BindingSource;
             this.templeidComboBox.DisplayMember = "templename_gr";
             this.templeidComboBox.FormattingEnabled = true;
-            this.templeidComboBox.Location = new System.Drawing.Point(828, 148);
+            this.templeidComboBox.Location = new System.Drawing.Point(821, 180);
             this.templeidComboBox.Name = "templeidComboBox";
             this.templeidComboBox.Size = new System.Drawing.Size(382, 25);
             this.templeidComboBox.TabIndex = 15;
             this.templeidComboBox.ValueMember = "templeid";
             this.templeidComboBox.SelectedIndexChanged += new System.EventHandler(this.templeidComboBox_SelectedIndexChanged);
             // 
-            // geographytemplesBindingSource
+            // geographytemples1BindingSource
             // 
-            this.geographytemplesBindingSource.DataMember = "geography_temples";
-            this.geographytemplesBindingSource.DataSource = this.ancienttempledbDataSet;
-            // 
-            // geography_templesTableAdapter
-            // 
-            this.geography_templesTableAdapter.ClearBeforeFill = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(828, 180);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(375, 125);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.geographytemples1BindingSource.DataMember = "geography_temples1";
+            this.geographytemples1BindingSource.DataSource = this.ancienttempledbDataSet;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(828, 406);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(375, 125);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -268,6 +259,10 @@
             this.feedback_imgTextBox.Size = new System.Drawing.Size(374, 23);
             this.feedback_imgTextBox.TabIndex = 19;
             // 
+            // geography_temples1TableAdapter
+            // 
+            this.geography_temples1TableAdapter.ClearBeforeFill = true;
+            // 
             // frmGeographyQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -275,7 +270,6 @@
             this.Controls.Add(this.feedback_imgTextBox);
             this.Controls.Add(label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.templeidComboBox);
             this.Controls.Add(this.questidTextBox);
             this.Controls.Add(questtext_grLabel);
@@ -303,7 +297,6 @@
             this.Controls.SetChildIndex(questtext_grLabel, 0);
             this.Controls.SetChildIndex(this.questidTextBox, 0);
             this.Controls.SetChildIndex(this.templeidComboBox, 0);
-            this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.pictureBox3, 0);
             this.Controls.SetChildIndex(label1, 0);
             this.Controls.SetChildIndex(this.feedback_imgTextBox, 0);
@@ -312,8 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.geography_questionBindingNavigator)).EndInit();
             this.geography_questionBindingNavigator.ResumeLayout(false);
             this.geography_questionBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.geographytemplesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.geographytemples1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -334,10 +326,9 @@
         private System.Windows.Forms.TextBox feedbacktext_grTextBox;
         private System.Windows.Forms.TextBox feedbacktext_enTextBox;
         private System.Windows.Forms.ComboBox templeidComboBox;
-        private System.Windows.Forms.BindingSource geographytemplesBindingSource;
-        private ancienttempledbDataSetTableAdapters.geography_templesTableAdapter geography_templesTableAdapter;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox feedback_imgTextBox;
+        private System.Windows.Forms.BindingSource geographytemples1BindingSource;
+        private ancienttempledbDataSetTableAdapters.geography_temples1TableAdapter geography_temples1TableAdapter;
     }
 }

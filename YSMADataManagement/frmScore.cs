@@ -8,34 +8,32 @@ using System.Windows.Forms;
 
 namespace YSMADataManagement
 {
-    public partial class frmIntro : YSMADataManagement.frmTemplate
+    public partial class frmScore : YSMADataManagement.frmTemplate
     {
-        public int gameid;
-        public frmIntro()
+        public int player_id;
+        public frmScore()
         {
             InitializeComponent();
         }
 
-        private void gamesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void scoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.gamesBindingSource.EndEdit();
+            this.scoresBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.ancienttempledbDataSet);
 
-        }      
+        }       
 
-        private void frmIntro_Load(object sender, EventArgs e)
+        private void frmScore_Load(object sender, EventArgs e)
         {
             try
             {
-                this.gamesTableAdapter.Fill(this.ancienttempledbDataSet.games, gameid );
+                this.scoresTableAdapter.Fill(this.ancienttempledbDataSet.scores, player_id);
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-            this.Text="Εισαγωγή Παιχνιδιού" ;
-
         }
     }
 }

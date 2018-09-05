@@ -17,7 +17,7 @@ namespace YSMADataManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmGeographyTemples frm = new frmGeographyTemples();
+            frmGeographyTemples2 frm = new frmGeographyTemples2();
             frm.Show();
         }
 
@@ -35,6 +35,12 @@ namespace YSMADataManagement
         private void button3_Click(object sender, EventArgs e)
         {
             frmGeographyTemples2 frm = new frmGeographyTemples2();
+            frm.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmGeographyTemples3 frm = new frmGeographyTemples3();
             frm.Show();
         }
     }

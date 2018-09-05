@@ -24,14 +24,16 @@ namespace YSMADataManagement
         private void button1_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
-            frm.gameid = 2;
+            frm.gameid = 1;
+            frm.formTitle = "Γεωγραφία";
             frm.Show();
         }       
 
         private void button2_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
-            frm.gameid = 6;
+            frm.gameid = 2;
+            frm.formTitle = "Επιγραφή";
             frm.Show();
 
         }
@@ -39,28 +41,32 @@ namespace YSMADataManagement
         private void button3_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
-            frm.gameid = 4;
+            frm.gameid = 3;
+            frm.formTitle = "Τύπος";
             frm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
-            frm.gameid = 1;
+            frm.gameid = 4;
+            frm.formTitle = "Κατασκευή";
             frm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
-            frm.gameid = 3;
+            frm.gameid = 5;
+            frm.formTitle = "Μορφή";
             frm.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             frmDidYouKnow frm = new frmDidYouKnow();
-            frm.gameid = 5;
+            frm.gameid = 6;
+            frm.formTitle = "Γλυπτική";
             frm.Show();
         }
     }

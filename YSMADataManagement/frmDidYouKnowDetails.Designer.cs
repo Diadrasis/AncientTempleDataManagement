@@ -62,6 +62,7 @@
             this.answertext_enTextBox = new System.Windows.Forms.TextBox();
             this.imagefileTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             dykidLabel = new System.Windows.Forms.Label();
             gameidLabel = new System.Windows.Forms.Label();
             questiontext_grLabel = new System.Windows.Forms.Label();
@@ -99,47 +100,47 @@
             // questiontext_grLabel
             // 
             questiontext_grLabel.AutoSize = true;
-            questiontext_grLabel.Location = new System.Drawing.Point(128, 193);
+            questiontext_grLabel.Location = new System.Drawing.Point(135, 183);
             questiontext_grLabel.Name = "questiontext_grLabel";
-            questiontext_grLabel.Size = new System.Drawing.Size(108, 17);
+            questiontext_grLabel.Size = new System.Drawing.Size(95, 17);
             questiontext_grLabel.TabIndex = 7;
-            questiontext_grLabel.Text = "questiontext gr:";
+            questiontext_grLabel.Text = "Ερώτηση (gr):";
             // 
             // questiontext_enLabel
             // 
             questiontext_enLabel.AutoSize = true;
-            questiontext_enLabel.Location = new System.Drawing.Point(606, 193);
+            questiontext_enLabel.Location = new System.Drawing.Point(606, 178);
             questiontext_enLabel.Name = "questiontext_enLabel";
-            questiontext_enLabel.Size = new System.Drawing.Size(111, 17);
+            questiontext_enLabel.Size = new System.Drawing.Size(98, 17);
             questiontext_enLabel.TabIndex = 9;
-            questiontext_enLabel.Text = "questiontext en:";
+            questiontext_enLabel.Text = "Ερώτηση (en):";
             // 
             // answertext_grLabel
             // 
             answertext_grLabel.AutoSize = true;
             answertext_grLabel.Location = new System.Drawing.Point(132, 259);
             answertext_grLabel.Name = "answertext_grLabel";
-            answertext_grLabel.Size = new System.Drawing.Size(99, 17);
+            answertext_grLabel.Size = new System.Drawing.Size(103, 17);
             answertext_grLabel.TabIndex = 11;
-            answertext_grLabel.Text = "answertext gr:";
+            answertext_grLabel.Text = "Απάντηση (gr):";
             // 
             // answertext_enLabel
             // 
             answertext_enLabel.AutoSize = true;
             answertext_enLabel.Location = new System.Drawing.Point(606, 259);
             answertext_enLabel.Name = "answertext_enLabel";
-            answertext_enLabel.Size = new System.Drawing.Size(102, 17);
+            answertext_enLabel.Size = new System.Drawing.Size(106, 17);
             answertext_enLabel.TabIndex = 13;
-            answertext_enLabel.Text = "answertext en:";
+            answertext_enLabel.Text = "Απάντηση (en):";
             // 
             // imagefileLabel
             // 
             imagefileLabel.AutoSize = true;
             imagefileLabel.Location = new System.Drawing.Point(132, 432);
             imagefileLabel.Name = "imagefileLabel";
-            imagefileLabel.Size = new System.Drawing.Size(72, 17);
+            imagefileLabel.Size = new System.Drawing.Size(109, 17);
             imagefileLabel.TabIndex = 15;
-            imagefileLabel.Text = "imagefile:";
+            imagefileLabel.Text = "Αρχείο Εικόνας:";
             // 
             // ancienttempledbDataSet
             // 
@@ -158,11 +159,15 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.construction_activitiesTableAdapter = null;
+            this.tableAdapterManager.construction_activityTableAdapter = null;
+            this.tableAdapterManager.construction_stagesTableAdapter = null;
             this.tableAdapterManager.didyouknowDetailsTableAdapter = this.didyouknowDetailsTableAdapter;
             this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
             this.tableAdapterManager.geography_questionTableAdapter = null;
+            this.tableAdapterManager.geography_temples1TableAdapter = null;
             this.tableAdapterManager.geography_templesTableAdapter = null;
             this.tableAdapterManager.playersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -310,17 +315,19 @@
             // questiontext_grTextBox
             // 
             this.questiontext_grTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.didyouknowDetailsBindingSource, "questiontext_gr", true));
-            this.questiontext_grTextBox.Location = new System.Drawing.Point(131, 222);
+            this.questiontext_grTextBox.Location = new System.Drawing.Point(131, 203);
+            this.questiontext_grTextBox.Multiline = true;
             this.questiontext_grTextBox.Name = "questiontext_grTextBox";
-            this.questiontext_grTextBox.Size = new System.Drawing.Size(423, 23);
+            this.questiontext_grTextBox.Size = new System.Drawing.Size(423, 42);
             this.questiontext_grTextBox.TabIndex = 8;
             // 
             // questiontext_enTextBox
             // 
             this.questiontext_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.didyouknowDetailsBindingSource, "questiontext_en", true));
-            this.questiontext_enTextBox.Location = new System.Drawing.Point(609, 222);
+            this.questiontext_enTextBox.Location = new System.Drawing.Point(609, 203);
+            this.questiontext_enTextBox.Multiline = true;
             this.questiontext_enTextBox.Name = "questiontext_enTextBox";
-            this.questiontext_enTextBox.Size = new System.Drawing.Size(451, 23);
+            this.questiontext_enTextBox.Size = new System.Drawing.Size(451, 42);
             this.questiontext_enTextBox.TabIndex = 10;
             // 
             // answertext_grTextBox
@@ -360,10 +367,21 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(313, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
+            // 
             // frmDidYouKnowDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.ClientSize = new System.Drawing.Size(1090, 749);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(dykidLabel);
             this.Controls.Add(this.dykidTextBox);
@@ -399,6 +417,7 @@
             this.Controls.SetChildIndex(this.dykidTextBox, 0);
             this.Controls.SetChildIndex(dykidLabel, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.didyouknowDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.didyouknowDetailsBindingNavigator)).EndInit();
@@ -437,5 +456,6 @@
         private System.Windows.Forms.TextBox answertext_enTextBox;
         private System.Windows.Forms.TextBox imagefileTextBox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

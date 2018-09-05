@@ -14,6 +14,8 @@ namespace YSMADataManagement
         public DataGridView dgv;
         BindingNavigator bnv;
         public int CurrentRow;
+        public string formTitle;
+
         public frmDidYouKnow()
         {
             InitializeComponent();
@@ -42,6 +44,7 @@ namespace YSMADataManagement
             DesignerHelper.DesignDataGridNavigator(bnv);
 
             this.Text = "Ήξερες Ότι;";
+            this.label1.Text = this.formTitle;
 
             dgv.Size = new Size(1150, 300);
 
@@ -83,6 +86,7 @@ namespace YSMADataManagement
                     frmDidYouKnowDetails frm = new frmDidYouKnowDetails();
                     frm.dykid = Convert.ToInt16(dgv.Rows[CurrentRow].Cells["dataGridViewTextBoxColumn1"].Value);
                     frm.callingForm = this;
+                    frm.formTitle = this.formTitle;
                     //frm.dgv = dgv;
                     //frm.SelectedRow = CurrentRow;
                     frm.dykImg = dgv.Rows[CurrentRow].Cells["dataGridViewTextBoxColumn7"].Value.ToString();

@@ -13,6 +13,7 @@ namespace YSMADataManagement
     {
         public int dykid;
         public string dykImg;
+        public string formTitle;
         public frmDidYouKnow callingForm;
         public frmDidYouKnowDetails()
         {
@@ -47,6 +48,7 @@ namespace YSMADataManagement
             this.dykidTextBox.Visible = false;            
             this.gameidTextBox.Visible = false;
             this.Text = "Ήξερες ότι;";
+            this.label1.Text = this.formTitle;
             
             ShowImage();
         }
@@ -88,7 +90,7 @@ namespace YSMADataManagement
 
         private void frmDidYouKnowDetails_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.callingForm.UpdateData();
+            //this.callingForm.UpdateData();
             this.callingForm.Reload();
         }
 

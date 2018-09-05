@@ -23,7 +23,7 @@ namespace YSMADataManagement
 
         private void frmConstruvtionMenu_Load(object sender, EventArgs e)
         {
-            this.Text = "Κατασκευή";
+            this.Text = "Δεδομένα Κατασκευής";
         }
     }
 }

@@ -24,14 +24,14 @@ namespace YSMADataManagement
         private void button1_Click(object sender, EventArgs e)
         {
             frmIntro frm = new frmIntro();
-            frm.gameid = 2;
+            frm.gameid = 1;
             frm.Show();
         }       
 
         private void button2_Click(object sender, EventArgs e)
         {
             frmIntro frm = new frmIntro();
-            frm.gameid = 6;
+            frm.gameid = 2;
             frm.Show();
 
         }
@@ -39,28 +39,28 @@ namespace YSMADataManagement
         private void button3_Click(object sender, EventArgs e)
         {
             frmIntro frm = new frmIntro();
-            frm.gameid = 4;
+            frm.gameid = 3;
             frm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmIntro frm = new frmIntro();
-            frm.gameid = 1;
+            frm.gameid = 4;
             frm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             frmIntro frm = new frmIntro();
-            frm.gameid = 3;
+            frm.gameid = 5;
             frm.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             frmIntro frm = new frmIntro();
-            frm.gameid = 5;
+            frm.gameid = 6;
             frm.Show();
         }
     }

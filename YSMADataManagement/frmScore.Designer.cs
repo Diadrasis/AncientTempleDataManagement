@@ -1,6 +1,6 @@
 ﻿namespace YSMADataManagement
 {
-    partial class frmDidYouKnow
+    partial class frmScore
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDidYouKnow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScore));
             this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
-            this.didyouknowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.didyouknowTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.didyouknowTableAdapter();
+            this.scoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scoresTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.scoresTableAdapter();
             this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
-            this.didyouknowBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.scoresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,22 +46,17 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.didyouknowBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.didyouknowDataGridView = new System.Windows.Forms.DataGridView();
+            this.scoresBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.scoresDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.details = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingNavigator)).BeginInit();
-            this.didyouknowBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingNavigator)).BeginInit();
+            this.scoresBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // ancienttempledbDataSet
@@ -69,14 +64,14 @@
             this.ancienttempledbDataSet.DataSetName = "ancienttempledbDataSet";
             this.ancienttempledbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // didyouknowBindingSource
+            // scoresBindingSource
             // 
-            this.didyouknowBindingSource.DataMember = "didyouknow";
-            this.didyouknowBindingSource.DataSource = this.ancienttempledbDataSet;
+            this.scoresBindingSource.DataMember = "scores";
+            this.scoresBindingSource.DataSource = this.ancienttempledbDataSet;
             // 
-            // didyouknowTableAdapter
+            // scoresTableAdapter
             // 
-            this.didyouknowTableAdapter.ClearBeforeFill = true;
+            this.scoresTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -85,22 +80,23 @@
             this.tableAdapterManager.construction_activityTableAdapter = null;
             this.tableAdapterManager.construction_stagesTableAdapter = null;
             this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
-            this.tableAdapterManager.didyouknowTableAdapter = this.didyouknowTableAdapter;
+            this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
             this.tableAdapterManager.geography_questionTableAdapter = null;
             this.tableAdapterManager.geography_temples1TableAdapter = null;
             this.tableAdapterManager.geography_templesTableAdapter = null;
             this.tableAdapterManager.playersTableAdapter = null;
+            this.tableAdapterManager.scoresTableAdapter = this.scoresTableAdapter;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // didyouknowBindingNavigator
+            // scoresBindingNavigator
             // 
-            this.didyouknowBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.didyouknowBindingNavigator.BindingSource = this.didyouknowBindingSource;
-            this.didyouknowBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.didyouknowBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.didyouknowBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scoresBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.scoresBindingNavigator.BindingSource = this.scoresBindingSource;
+            this.scoresBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.scoresBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.scoresBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -112,17 +108,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.didyouknowBindingNavigatorSaveItem});
-            this.didyouknowBindingNavigator.Location = new System.Drawing.Point(0, 97);
-            this.didyouknowBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.didyouknowBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.didyouknowBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.didyouknowBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.didyouknowBindingNavigator.Name = "didyouknowBindingNavigator";
-            this.didyouknowBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.didyouknowBindingNavigator.Size = new System.Drawing.Size(1273, 25);
-            this.didyouknowBindingNavigator.TabIndex = 1;
-            this.didyouknowBindingNavigator.Text = "bindingNavigator1";
+            this.scoresBindingNavigatorSaveItem});
+            this.scoresBindingNavigator.Location = new System.Drawing.Point(0, 97);
+            this.scoresBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.scoresBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.scoresBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.scoresBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.scoresBindingNavigator.Name = "scoresBindingNavigator";
+            this.scoresBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.scoresBindingNavigator.Size = new System.Drawing.Size(1273, 25);
+            this.scoresBindingNavigator.TabIndex = 1;
+            this.scoresBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -209,113 +205,70 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // didyouknowBindingNavigatorSaveItem
+            // scoresBindingNavigatorSaveItem
             // 
-            this.didyouknowBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.didyouknowBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("didyouknowBindingNavigatorSaveItem.Image")));
-            this.didyouknowBindingNavigatorSaveItem.Name = "didyouknowBindingNavigatorSaveItem";
-            this.didyouknowBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.didyouknowBindingNavigatorSaveItem.Text = "Save Data";
-            this.didyouknowBindingNavigatorSaveItem.Click += new System.EventHandler(this.didyouknowBindingNavigatorSaveItem_Click);
+            this.scoresBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.scoresBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("scoresBindingNavigatorSaveItem.Image")));
+            this.scoresBindingNavigatorSaveItem.Name = "scoresBindingNavigatorSaveItem";
+            this.scoresBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.scoresBindingNavigatorSaveItem.Text = "Save Data";
+            this.scoresBindingNavigatorSaveItem.Click += new System.EventHandler(this.scoresBindingNavigatorSaveItem_Click);
             // 
-            // didyouknowDataGridView
+            // scoresDataGridView
             // 
-            this.didyouknowDataGridView.AutoGenerateColumns = false;
-            this.didyouknowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.didyouknowDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.scoresDataGridView.AutoGenerateColumns = false;
+            this.scoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.scoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.details});
-            this.didyouknowDataGridView.DataSource = this.didyouknowBindingSource;
-            this.didyouknowDataGridView.Location = new System.Drawing.Point(43, 164);
-            this.didyouknowDataGridView.MultiSelect = false;
-            this.didyouknowDataGridView.Name = "didyouknowDataGridView";
-            this.didyouknowDataGridView.Size = new System.Drawing.Size(830, 220);
-            this.didyouknowDataGridView.TabIndex = 3;
-            this.didyouknowDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.didyouknowDataGridView_CellContentClick);
-            this.didyouknowDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.didyouknowDataGridView_RowEnter);
+            this.dataGridViewTextBoxColumn4});
+            this.scoresDataGridView.DataSource = this.scoresBindingSource;
+            this.scoresDataGridView.Location = new System.Drawing.Point(99, 169);
+            this.scoresDataGridView.Name = "scoresDataGridView";
+            this.scoresDataGridView.Size = new System.Drawing.Size(776, 220);
+            this.scoresDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "dykid";
-            this.dataGridViewTextBoxColumn1.HeaderText = "dykid";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "scoreid";
+            this.dataGridViewTextBoxColumn1.HeaderText = "scoreid";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "gameid";
-            this.dataGridViewTextBoxColumn2.HeaderText = "gameid";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "playerid";
+            this.dataGridViewTextBoxColumn2.HeaderText = "playerid";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "questiontext_gr";
-            this.dataGridViewTextBoxColumn3.HeaderText = "questiontext_gr";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "gameid";
+            this.dataGridViewTextBoxColumn3.HeaderText = "gameid";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "questiontext_en";
-            this.dataGridViewTextBoxColumn4.HeaderText = "questiontext_en";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "scorepoints";
+            this.dataGridViewTextBoxColumn4.HeaderText = "scorepoints";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "answertext_gr";
-            this.dataGridViewTextBoxColumn5.HeaderText = "answertext_gr";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "answertext_en";
-            this.dataGridViewTextBoxColumn6.HeaderText = "answertext_en";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "imagefile";
-            this.dataGridViewTextBoxColumn7.HeaderText = "imagefile";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // details
-            // 
-            this.details.HeaderText = "Details";
-            this.details.Image = global::YSMADataManagement.Properties.Resources.details;
-            this.details.Name = "details";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(298, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
-            // 
-            // frmDidYouKnow
+            // frmScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.ClientSize = new System.Drawing.Size(1273, 846);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.didyouknowDataGridView);
-            this.Controls.Add(this.didyouknowBindingNavigator);
-            this.Name = "frmDidYouKnow";
-            this.Load += new System.EventHandler(this.frmDidYouKnow_Load);
-            this.Controls.SetChildIndex(this.didyouknowBindingNavigator, 0);
-            this.Controls.SetChildIndex(this.didyouknowDataGridView, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.Add(this.scoresDataGridView);
+            this.Controls.Add(this.scoresBindingNavigator);
+            this.Name = "frmScore";
+            this.Load += new System.EventHandler(this.frmScore_Load);
+            this.Controls.SetChildIndex(this.scoresBindingNavigator, 0);
+            this.Controls.SetChildIndex(this.scoresDataGridView, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowBindingNavigator)).EndInit();
-            this.didyouknowBindingNavigator.ResumeLayout(false);
-            this.didyouknowBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.didyouknowDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingNavigator)).EndInit();
+            this.scoresBindingNavigator.ResumeLayout(false);
+            this.scoresBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,10 +277,10 @@
         #endregion
 
         private ancienttempledbDataSet ancienttempledbDataSet;
-        private System.Windows.Forms.BindingSource didyouknowBindingSource;
-        private ancienttempledbDataSetTableAdapters.didyouknowTableAdapter didyouknowTableAdapter;
+        private System.Windows.Forms.BindingSource scoresBindingSource;
+        private ancienttempledbDataSetTableAdapters.scoresTableAdapter scoresTableAdapter;
         private ancienttempledbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator didyouknowBindingNavigator;
+        private System.Windows.Forms.BindingNavigator scoresBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -339,16 +292,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton didyouknowBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView didyouknowDataGridView;
+        private System.Windows.Forms.ToolStripButton scoresBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView scoresDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewImageColumn details;
-        private System.Windows.Forms.Label label1;
     }
 }

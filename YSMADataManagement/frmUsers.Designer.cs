@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
             this.playersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -46,8 +48,6 @@
             this.playersDataGridView = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
             this.playersTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.playersTableAdapter();
             this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +57,12 @@
             this.avatar_haircolor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.avatar_clothcolor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.player_house_file = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.score = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingNavigator)).BeginInit();
             this.playersBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // playersBindingNavigator
@@ -102,6 +103,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataMember = "players";
+            this.playersBindingSource.DataSource = this.ancienttempledbDataSet;
+            // 
+            // ancienttempledbDataSet
+            // 
+            this.ancienttempledbDataSet.DataSetName = "ancienttempledbDataSet";
+            this.ancienttempledbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -199,18 +210,20 @@
             this.avatar_person,
             this.avatar_haircolor,
             this.avatar_clothcolor,
-            this.player_house_file});
+            this.player_house_file,
+            this.score});
             this.playersDataGridView.DataSource = this.playersBindingSource;
             this.playersDataGridView.Location = new System.Drawing.Point(49, 221);
-            this.playersDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playersDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.playersDataGridView.Name = "playersDataGridView";
             this.playersDataGridView.Size = new System.Drawing.Size(778, 326);
             this.playersDataGridView.TabIndex = 2;
+            this.playersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.playersDataGridView_CellContentClick);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 23);
             this.textBox1.TabIndex = 3;
@@ -218,21 +231,11 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(439, 104);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(201, 23);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // playersBindingSource
-            // 
-            this.playersBindingSource.DataMember = "players";
-            this.playersBindingSource.DataSource = this.ancienttempledbDataSet;
-            // 
-            // ancienttempledbDataSet
-            // 
-            this.ancienttempledbDataSet.DataSetName = "ancienttempledbDataSet";
-            this.ancienttempledbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // playersTableAdapter
             // 
@@ -241,13 +244,18 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.construction_activitiesTableAdapter = null;
+            this.tableAdapterManager.construction_activityTableAdapter = null;
+            this.tableAdapterManager.construction_stagesTableAdapter = null;
             this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
             this.tableAdapterManager.didyouknowTableAdapter = null;
             this.tableAdapterManager.gamesTableAdapter = null;
             this.tableAdapterManager.geography_questionsTableAdapter = null;
             this.tableAdapterManager.geography_questionTableAdapter = null;
+            this.tableAdapterManager.geography_temples1TableAdapter = null;
             this.tableAdapterManager.geography_templesTableAdapter = null;
             this.tableAdapterManager.playersTableAdapter = this.playersTableAdapter;
+            this.tableAdapterManager.scoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // dataGridViewTextBoxColumn1
@@ -273,8 +281,8 @@
             this.avatar_person.DataPropertyName = "avatar_person";
             this.avatar_person.HeaderText = "avatar_person";
             this.avatar_person.Items.AddRange(new object[] {
-            "boy",
-            "girl"});
+            "true",
+            "false"});
             this.avatar_person.Name = "avatar_person";
             this.avatar_person.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.avatar_person.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -284,8 +292,9 @@
             this.avatar_haircolor.DataPropertyName = "avatar_haircolor";
             this.avatar_haircolor.HeaderText = "avatar_haircolor";
             this.avatar_haircolor.Items.AddRange(new object[] {
-            "brown",
-            "black"});
+            "yellow",
+            "black",
+            "brown"});
             this.avatar_haircolor.Name = "avatar_haircolor";
             this.avatar_haircolor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.avatar_haircolor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -295,9 +304,9 @@
             this.avatar_clothcolor.DataPropertyName = "avatar_clothcolor";
             this.avatar_clothcolor.HeaderText = "avatar_clothcolor";
             this.avatar_clothcolor.Items.AddRange(new object[] {
-            "black",
+            "navy",
             "red",
-            "yellow"});
+            "purple"});
             this.avatar_clothcolor.Name = "avatar_clothcolor";
             this.avatar_clothcolor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.avatar_clothcolor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -308,6 +317,12 @@
             this.player_house_file.HeaderText = "player_house_file";
             this.player_house_file.Name = "player_house_file";
             // 
+            // score
+            // 
+            this.score.HeaderText = "score";
+            this.score.Image = global::YSMADataManagement.Properties.Resources.details;
+            this.score.Name = "score";
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -316,7 +331,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.playersDataGridView);
             this.Controls.Add(this.playersBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUsers";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.Controls.SetChildIndex(this.playersBindingNavigator, 0);
@@ -326,9 +341,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingNavigator)).EndInit();
             this.playersBindingNavigator.ResumeLayout(false);
             this.playersBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playersDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,5 +378,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn avatar_haircolor;
         private System.Windows.Forms.DataGridViewComboBoxColumn avatar_clothcolor;
         private System.Windows.Forms.DataGridViewTextBoxColumn player_house_file;
+        private System.Windows.Forms.DataGridViewImageColumn score;
     }
 }
