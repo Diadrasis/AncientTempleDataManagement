@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScore));
-            this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
-            this.scoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.scoresTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.scoresTableAdapter();
-            this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
             this.scoresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.scoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ancienttempledbDataSet = new YSMADataManagement.ancienttempledbDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,47 +46,24 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.scoresBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.scoresDataGridView = new System.Windows.Forms.DataGridView();
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.games1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scoresTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.scoresTableAdapter();
+            this.tableAdapterManager = new YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager();
+            this.playersTableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.playersTableAdapter();
+            this.games1TableAdapter = new YSMADataManagement.ancienttempledbDataSetTableAdapters.games1TableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.gameid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoresBindingNavigator)).BeginInit();
             this.scoresBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoresDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.games1BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ancienttempledbDataSet
-            // 
-            this.ancienttempledbDataSet.DataSetName = "ancienttempledbDataSet";
-            this.ancienttempledbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // scoresBindingSource
-            // 
-            this.scoresBindingSource.DataMember = "scores";
-            this.scoresBindingSource.DataSource = this.ancienttempledbDataSet;
-            // 
-            // scoresTableAdapter
-            // 
-            this.scoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.construction_activitiesTableAdapter = null;
-            this.tableAdapterManager.construction_activityTableAdapter = null;
-            this.tableAdapterManager.construction_stagesTableAdapter = null;
-            this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
-            this.tableAdapterManager.didyouknowTableAdapter = null;
-            this.tableAdapterManager.gamesTableAdapter = null;
-            this.tableAdapterManager.geography_questionsTableAdapter = null;
-            this.tableAdapterManager.geography_questionTableAdapter = null;
-            this.tableAdapterManager.geography_temples1TableAdapter = null;
-            this.tableAdapterManager.geography_templesTableAdapter = null;
-            this.tableAdapterManager.playersTableAdapter = null;
-            this.tableAdapterManager.scoresTableAdapter = this.scoresTableAdapter;
-            this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // scoresBindingNavigator
             // 
@@ -128,6 +103,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // scoresBindingSource
+            // 
+            this.scoresBindingSource.DataMember = "scores";
+            this.scoresBindingSource.DataSource = this.ancienttempledbDataSet;
+            // 
+            // ancienttempledbDataSet
+            // 
+            this.ancienttempledbDataSet.DataSetName = "ancienttempledbDataSet";
+            this.ancienttempledbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -221,13 +206,53 @@
             this.scoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
+            this.gameid,
             this.dataGridViewTextBoxColumn4});
             this.scoresDataGridView.DataSource = this.scoresBindingSource;
             this.scoresDataGridView.Location = new System.Drawing.Point(99, 169);
             this.scoresDataGridView.Name = "scoresDataGridView";
             this.scoresDataGridView.Size = new System.Drawing.Size(776, 220);
             this.scoresDataGridView.TabIndex = 3;
+            // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataMember = "players";
+            this.playersBindingSource.DataSource = this.ancienttempledbDataSet;
+            // 
+            // games1BindingSource
+            // 
+            this.games1BindingSource.DataMember = "games1";
+            this.games1BindingSource.DataSource = this.ancienttempledbDataSet;
+            // 
+            // scoresTableAdapter
+            // 
+            this.scoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.construction_activitiesTableAdapter = null;
+            this.tableAdapterManager.construction_activityTableAdapter = null;
+            this.tableAdapterManager.construction_stagesTableAdapter = null;
+            this.tableAdapterManager.didyouknowDetailsTableAdapter = null;
+            this.tableAdapterManager.didyouknowTableAdapter = null;
+            this.tableAdapterManager.games1TableAdapter = null;
+            this.tableAdapterManager.gamesTableAdapter = null;
+            this.tableAdapterManager.geography_questionsTableAdapter = null;
+            this.tableAdapterManager.geography_questionTableAdapter = null;
+            this.tableAdapterManager.geography_temples1TableAdapter = null;
+            this.tableAdapterManager.geography_templesTableAdapter = null;
+            this.tableAdapterManager.playersTableAdapter = null;
+            this.tableAdapterManager.scoresTableAdapter = this.scoresTableAdapter;
+            this.tableAdapterManager.UpdateOrder = YSMADataManagement.ancienttempledbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // playersTableAdapter
+            // 
+            this.playersTableAdapter.ClearBeforeFill = true;
+            // 
+            // games1TableAdapter
+            // 
+            this.games1TableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -238,14 +263,20 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "playerid";
+            this.dataGridViewTextBoxColumn2.DataSource = this.playersBindingSource;
+            this.dataGridViewTextBoxColumn2.DisplayMember = "playername";
             this.dataGridViewTextBoxColumn2.HeaderText = "playerid";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn2.ValueMember = "playerid";
             // 
-            // dataGridViewTextBoxColumn3
+            // gameid
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "gameid";
-            this.dataGridViewTextBoxColumn3.HeaderText = "gameid";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.gameid.DataPropertyName = "gameid";
+            this.gameid.HeaderText = "gameid";
+            this.gameid.Name = "gameid";
+            this.gameid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -263,12 +294,14 @@
             this.Load += new System.EventHandler(this.frmScore_Load);
             this.Controls.SetChildIndex(this.scoresBindingNavigator, 0);
             this.Controls.SetChildIndex(this.scoresDataGridView, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoresBindingNavigator)).EndInit();
             this.scoresBindingNavigator.ResumeLayout(false);
             this.scoresBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ancienttempledbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoresDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.games1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,9 +327,13 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton scoresBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView scoresDataGridView;
+        private System.Windows.Forms.BindingSource playersBindingSource;
+        private ancienttempledbDataSetTableAdapters.playersTableAdapter playersTableAdapter;
+        private System.Windows.Forms.BindingSource games1BindingSource;
+        private ancienttempledbDataSetTableAdapters.games1TableAdapter games1TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gameid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
