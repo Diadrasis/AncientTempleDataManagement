@@ -2907,7 +2907,7 @@ namespace YSMADataManagement {
                 this.columnquestiontext_gr.MaxLength = 500;
                 this.columnquestiontext_en.MaxLength = 300;
                 this.columnanswertext_gr.MaxLength = 500;
-                this.columnanswertext_en.MaxLength = 300;
+                this.columnanswertext_en.MaxLength = 500;
                 this.columnimagefile.MaxLength = 300;
             }
             
@@ -3048,13 +3048,13 @@ namespace YSMADataManagement {
             
             private global::System.Data.DataColumn columnquestiontext_gr;
             
-            private global::System.Data.DataColumn columnquestiontext_en;
-            
             private global::System.Data.DataColumn columnanswertext_gr;
             
-            private global::System.Data.DataColumn columnanswertext_en;
-            
             private global::System.Data.DataColumn columnimagefile;
+            
+            private global::System.Data.DataColumn columnquestiontext_en;
+            
+            private global::System.Data.DataColumn columnanswertext_en;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -3115,14 +3115,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn questiontext_enColumn {
-                get {
-                    return this.columnquestiontext_en;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn answertext_grColumn {
                 get {
                     return this.columnanswertext_gr;
@@ -3131,17 +3123,25 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn answertext_enColumn {
+            public global::System.Data.DataColumn imagefileColumn {
                 get {
-                    return this.columnanswertext_en;
+                    return this.columnimagefile;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn imagefileColumn {
+            public global::System.Data.DataColumn questiontext_enColumn {
                 get {
-                    return this.columnimagefile;
+                    return this.columnquestiontext_en;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn answertext_enColumn {
+                get {
+                    return this.columnanswertext_en;
                 }
             }
             
@@ -3182,16 +3182,16 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public didyouknowDetailsRow AdddidyouknowDetailsRow(int gameid, string questiontext_gr, string questiontext_en, string answertext_gr, string answertext_en, string imagefile) {
+            public didyouknowDetailsRow AdddidyouknowDetailsRow(int gameid, string questiontext_gr, string answertext_gr, string imagefile, string questiontext_en, string answertext_en) {
                 didyouknowDetailsRow rowdidyouknowDetailsRow = ((didyouknowDetailsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         gameid,
                         questiontext_gr,
-                        questiontext_en,
                         answertext_gr,
-                        answertext_en,
-                        imagefile};
+                        imagefile,
+                        questiontext_en,
+                        answertext_en};
                 rowdidyouknowDetailsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdidyouknowDetailsRow);
                 return rowdidyouknowDetailsRow;
@@ -3224,10 +3224,10 @@ namespace YSMADataManagement {
                 this.columndykid = base.Columns["dykid"];
                 this.columngameid = base.Columns["gameid"];
                 this.columnquestiontext_gr = base.Columns["questiontext_gr"];
-                this.columnquestiontext_en = base.Columns["questiontext_en"];
                 this.columnanswertext_gr = base.Columns["answertext_gr"];
-                this.columnanswertext_en = base.Columns["answertext_en"];
                 this.columnimagefile = base.Columns["imagefile"];
+                this.columnquestiontext_en = base.Columns["questiontext_en"];
+                this.columnanswertext_en = base.Columns["answertext_en"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3239,14 +3239,14 @@ namespace YSMADataManagement {
                 base.Columns.Add(this.columngameid);
                 this.columnquestiontext_gr = new global::System.Data.DataColumn("questiontext_gr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnquestiontext_gr);
-                this.columnquestiontext_en = new global::System.Data.DataColumn("questiontext_en", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquestiontext_en);
                 this.columnanswertext_gr = new global::System.Data.DataColumn("answertext_gr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnanswertext_gr);
-                this.columnanswertext_en = new global::System.Data.DataColumn("answertext_en", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnanswertext_en);
                 this.columnimagefile = new global::System.Data.DataColumn("imagefile", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimagefile);
+                this.columnquestiontext_en = new global::System.Data.DataColumn("questiontext_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquestiontext_en);
+                this.columnanswertext_en = new global::System.Data.DataColumn("answertext_en", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnanswertext_en);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columndykid}, true));
                 this.columndykid.AutoIncrement = true;
@@ -3255,10 +3255,10 @@ namespace YSMADataManagement {
                 this.columndykid.AllowDBNull = false;
                 this.columndykid.Unique = true;
                 this.columnquestiontext_gr.MaxLength = 500;
-                this.columnquestiontext_en.MaxLength = 300;
                 this.columnanswertext_gr.MaxLength = 500;
-                this.columnanswertext_en.MaxLength = 300;
                 this.columnimagefile.MaxLength = 300;
+                this.columnquestiontext_en.MaxLength = 500;
+                this.columnanswertext_en.MaxLength = 500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4322,8 +4322,6 @@ namespace YSMADataManagement {
             
             private global::System.Data.DataColumn columntempleid;
             
-            private global::System.Data.DataColumn columntemplename_gr;
-            
             private global::System.Data.DataColumn columntemplename_en;
             
             private global::System.Data.DataColumn columntempleimg;
@@ -4331,6 +4329,8 @@ namespace YSMADataManagement {
             private global::System.Data.DataColumn columntempleiconx;
             
             private global::System.Data.DataColumn columntempleicony;
+            
+            private global::System.Data.DataColumn columntemplename_gr;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4375,14 +4375,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn templename_grColumn {
-                get {
-                    return this.columntemplename_gr;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn templename_enColumn {
                 get {
                     return this.columntemplename_en;
@@ -4410,6 +4402,14 @@ namespace YSMADataManagement {
             public global::System.Data.DataColumn templeiconyColumn {
                 get {
                     return this.columntempleicony;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn templename_grColumn {
+                get {
+                    return this.columntemplename_gr;
                 }
             }
             
@@ -4450,15 +4450,15 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public geography_temples1Row Addgeography_temples1Row(string templename_gr, string templename_en, string templeimg, int templeiconx, int templeicony) {
+            public geography_temples1Row Addgeography_temples1Row(string templename_en, string templeimg, int templeiconx, int templeicony, string templename_gr) {
                 geography_temples1Row rowgeography_temples1Row = ((geography_temples1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        templename_gr,
                         templename_en,
                         templeimg,
                         templeiconx,
-                        templeicony};
+                        templeicony,
+                        templename_gr};
                 rowgeography_temples1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgeography_temples1Row);
                 return rowgeography_temples1Row;
@@ -4489,11 +4489,11 @@ namespace YSMADataManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columntempleid = base.Columns["templeid"];
-                this.columntemplename_gr = base.Columns["templename_gr"];
                 this.columntemplename_en = base.Columns["templename_en"];
                 this.columntempleimg = base.Columns["templeimg"];
                 this.columntempleiconx = base.Columns["templeiconx"];
                 this.columntempleicony = base.Columns["templeicony"];
+                this.columntemplename_gr = base.Columns["templename_gr"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4501,8 +4501,6 @@ namespace YSMADataManagement {
             private void InitClass() {
                 this.columntempleid = new global::System.Data.DataColumn("templeid", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntempleid);
-                this.columntemplename_gr = new global::System.Data.DataColumn("templename_gr", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntemplename_gr);
                 this.columntemplename_en = new global::System.Data.DataColumn("templename_en", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntemplename_en);
                 this.columntempleimg = new global::System.Data.DataColumn("templeimg", typeof(string), null, global::System.Data.MappingType.Element);
@@ -4511,6 +4509,8 @@ namespace YSMADataManagement {
                 base.Columns.Add(this.columntempleiconx);
                 this.columntempleicony = new global::System.Data.DataColumn("templeicony", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntempleicony);
+                this.columntemplename_gr = new global::System.Data.DataColumn("templename_gr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntemplename_gr);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntempleid}, true));
                 this.columntempleid.AutoIncrement = true;
@@ -4518,9 +4518,9 @@ namespace YSMADataManagement {
                 this.columntempleid.AutoIncrementStep = -1;
                 this.columntempleid.AllowDBNull = false;
                 this.columntempleid.Unique = true;
-                this.columntemplename_gr.MaxLength = 50;
-                this.columntemplename_en.MaxLength = 50;
+                this.columntemplename_en.MaxLength = 100;
                 this.columntempleimg.MaxLength = 45;
+                this.columntemplename_gr.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8525,22 +8525,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string questiontext_en {
-                get {
-                    try {
-                        return ((string)(this[this.tabledidyouknowDetails.questiontext_enColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'questiontext_en\' in table \'didyouknowDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledidyouknowDetails.questiontext_enColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string answertext_gr {
                 get {
                     try {
@@ -8557,22 +8541,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string answertext_en {
-                get {
-                    try {
-                        return ((string)(this[this.tabledidyouknowDetails.answertext_enColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'answertext_en\' in table \'didyouknowDetails\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledidyouknowDetails.answertext_enColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string imagefile {
                 get {
                     try {
@@ -8584,6 +8552,38 @@ namespace YSMADataManagement {
                 }
                 set {
                     this[this.tabledidyouknowDetails.imagefileColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string questiontext_en {
+                get {
+                    try {
+                        return ((string)(this[this.tabledidyouknowDetails.questiontext_enColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'questiontext_en\' in table \'didyouknowDetails\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledidyouknowDetails.questiontext_enColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string answertext_en {
+                get {
+                    try {
+                        return ((string)(this[this.tabledidyouknowDetails.answertext_enColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'answertext_en\' in table \'didyouknowDetails\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledidyouknowDetails.answertext_enColumn] = value;
                 }
             }
             
@@ -8613,18 +8613,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isquestiontext_enNull() {
-                return this.IsNull(this.tabledidyouknowDetails.questiontext_enColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setquestiontext_enNull() {
-                this[this.tabledidyouknowDetails.questiontext_enColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isanswertext_grNull() {
                 return this.IsNull(this.tabledidyouknowDetails.answertext_grColumn);
             }
@@ -8637,18 +8625,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isanswertext_enNull() {
-                return this.IsNull(this.tabledidyouknowDetails.answertext_enColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setanswertext_enNull() {
-                this[this.tabledidyouknowDetails.answertext_enColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsimagefileNull() {
                 return this.IsNull(this.tabledidyouknowDetails.imagefileColumn);
             }
@@ -8657,6 +8633,30 @@ namespace YSMADataManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetimagefileNull() {
                 this[this.tabledidyouknowDetails.imagefileColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isquestiontext_enNull() {
+                return this.IsNull(this.tabledidyouknowDetails.questiontext_enColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setquestiontext_enNull() {
+                this[this.tabledidyouknowDetails.questiontext_enColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isanswertext_enNull() {
+                return this.IsNull(this.tabledidyouknowDetails.answertext_enColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setanswertext_enNull() {
+                this[this.tabledidyouknowDetails.answertext_enColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9051,22 +9051,6 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string templename_gr {
-                get {
-                    try {
-                        return ((string)(this[this.tablegeography_temples1.templename_grColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'templename_gr\' in table \'geography_temples1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablegeography_temples1.templename_grColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string templename_en {
                 get {
                     try {
@@ -9131,14 +9115,18 @@ namespace YSMADataManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istemplename_grNull() {
-                return this.IsNull(this.tablegeography_temples1.templename_grColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settemplename_grNull() {
-                this[this.tablegeography_temples1.templename_grColumn] = global::System.Convert.DBNull;
+            public string templename_gr {
+                get {
+                    try {
+                        return ((string)(this[this.tablegeography_temples1.templename_grColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'templename_gr\' in table \'geography_temples1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegeography_temples1.templename_grColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9187,6 +9175,18 @@ namespace YSMADataManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettempleiconyNull() {
                 this[this.tablegeography_temples1.templeiconyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istemplename_grNull() {
+                return this.IsNull(this.tablegeography_temples1.templename_grColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settemplename_grNull() {
+                this[this.tablegeography_temples1.templename_grColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -16434,14 +16434,14 @@ WHERE        (gameid = @gameid)";
             tableMapping.ColumnMappings.Add("dykid", "dykid");
             tableMapping.ColumnMappings.Add("gameid", "gameid");
             tableMapping.ColumnMappings.Add("questiontext_gr", "questiontext_gr");
-            tableMapping.ColumnMappings.Add("questiontext_en", "questiontext_en");
             tableMapping.ColumnMappings.Add("answertext_gr", "answertext_gr");
-            tableMapping.ColumnMappings.Add("answertext_en", "answertext_en");
             tableMapping.ColumnMappings.Add("imagefile", "imagefile");
+            tableMapping.ColumnMappings.Add("questiontext_en", "questiontext_en");
+            tableMapping.ColumnMappings.Add("answertext_en", "answertext_en");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `didyouknow` WHERE ((`dykid` = @p1) AND ((@p2 = 1 AND `gameid` IS NULL) OR (`gameid` = @p3)) AND ((@p4 = 1 AND `questiontext_gr` IS NULL) OR (`questiontext_gr` = @p5)) AND ((@p6 = 1 AND `questiontext_en` IS NULL) OR (`questiontext_en` = @p7)) AND ((@p8 = 1 AND `answertext_gr` IS NULL) OR (`answertext_gr` = @p9)) AND ((@p10 = 1 AND `answertext_en` IS NULL) OR (`answertext_en` = @p11)) AND ((@p12 = 1 AND `imagefile` IS NULL) OR (`imagefile` = @p13)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `didyouknow` WHERE ((`dykid` = @p1) AND ((@p2 = 1 AND `gameid` IS NULL) OR (`gameid` = @p3)) AND ((@p4 = 1 AND `questiontext_gr` IS NULL) OR (`questiontext_gr` = @p5)) AND ((@p6 = 1 AND `answertext_gr` IS NULL) OR (`answertext_gr` = @p7)) AND ((@p8 = 1 AND `imagefile` IS NULL) OR (`imagefile` = @p9)) AND ((@p10 = 1 AND `questiontext_en` IS NULL) OR (`questiontext_en` = @p11)) AND ((@p12 = 1 AND `answertext_en` IS NULL) OR (`answertext_en` = @p13)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -16490,7 +16490,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "questiontext_en";
+            param.SourceColumn = "answertext_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -16499,7 +16499,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "questiontext_en";
+            param.SourceColumn = "answertext_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16507,7 +16507,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_gr";
+            param.SourceColumn = "imagefile";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -16516,7 +16516,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_gr";
+            param.SourceColumn = "imagefile";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16524,7 +16524,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_en";
+            param.SourceColumn = "questiontext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -16533,7 +16533,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_en";
+            param.SourceColumn = "questiontext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16541,7 +16541,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "imagefile";
+            param.SourceColumn = "answertext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -16550,13 +16550,13 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "imagefile";
+            param.SourceColumn = "answertext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `didyouknow` (`gameid`, `questiontext_gr`, `questiontext_en`, `answer" +
-                "text_gr`, `answertext_en`, `imagefile`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `didyouknow` (`gameid`, `questiontext_gr`, `answertext_gr`, `imagefil" +
+                "e`, `questiontext_en`, `answertext_en`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -16577,32 +16577,32 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "questiontext_en";
+            param.SourceColumn = "answertext_gr";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_gr";
+            param.SourceColumn = "imagefile";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_en";
+            param.SourceColumn = "questiontext_en";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "imagefile";
+            param.SourceColumn = "answertext_en";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `didyouknow` SET `gameid` = @p1, `questiontext_gr` = @p2, `questiontext_en` = @p3, `answertext_gr` = @p4, `answertext_en` = @p5, `imagefile` = @p6 WHERE ((`dykid` = @p7) AND ((@p8 = 1 AND `gameid` IS NULL) OR (`gameid` = @p9)) AND ((@p10 = 1 AND `questiontext_gr` IS NULL) OR (`questiontext_gr` = @p11)) AND ((@p12 = 1 AND `questiontext_en` IS NULL) OR (`questiontext_en` = @p13)) AND ((@p14 = 1 AND `answertext_gr` IS NULL) OR (`answertext_gr` = @p15)) AND ((@p16 = 1 AND `answertext_en` IS NULL) OR (`answertext_en` = @p17)) AND ((@p18 = 1 AND `imagefile` IS NULL) OR (`imagefile` = @p19)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `didyouknow` SET `gameid` = @p1, `questiontext_gr` = @p2, `answertext_gr` = @p3, `imagefile` = @p4, `questiontext_en` = @p5, `answertext_en` = @p6 WHERE ((`dykid` = @p7) AND ((@p8 = 1 AND `gameid` IS NULL) OR (`gameid` = @p9)) AND ((@p10 = 1 AND `questiontext_gr` IS NULL) OR (`questiontext_gr` = @p11)) AND ((@p12 = 1 AND `answertext_gr` IS NULL) OR (`answertext_gr` = @p13)) AND ((@p14 = 1 AND `imagefile` IS NULL) OR (`imagefile` = @p15)) AND ((@p16 = 1 AND `questiontext_en` IS NULL) OR (`questiontext_en` = @p17)) AND ((@p18 = 1 AND `answertext_en` IS NULL) OR (`answertext_en` = @p19)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -16623,28 +16623,28 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "questiontext_en";
+            param.SourceColumn = "answertext_gr";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_gr";
+            param.SourceColumn = "imagefile";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_en";
+            param.SourceColumn = "questiontext_en";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "imagefile";
+            param.SourceColumn = "answertext_en";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p7";
@@ -16693,7 +16693,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "questiontext_en";
+            param.SourceColumn = "answertext_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -16702,7 +16702,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "questiontext_en";
+            param.SourceColumn = "answertext_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16710,7 +16710,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_gr";
+            param.SourceColumn = "imagefile";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -16719,7 +16719,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_gr";
+            param.SourceColumn = "imagefile";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16727,7 +16727,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_en";
+            param.SourceColumn = "questiontext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -16736,7 +16736,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "answertext_en";
+            param.SourceColumn = "questiontext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16744,7 +16744,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "imagefile";
+            param.SourceColumn = "answertext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -16753,7 +16753,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "imagefile";
+            param.SourceColumn = "answertext_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -16771,8 +16771,8 @@ WHERE        (gameid = @gameid)";
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        dykid, gameid, questiontext_gr, questiontext_en, answertext_gr, ans" +
-                "wertext_en, imagefile\r\nFROM            didyouknow\r\nWHERE        (dykid = @dykid)" +
+            this._commandCollection[0].CommandText = "SELECT        dykid, gameid, questiontext_gr, answertext_gr, imagefile, questiont" +
+                "ext_en, answertext_en\r\nFROM            didyouknow\r\nWHERE        (dykid = @dykid)" +
                 "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18545,15 +18545,15 @@ WHERE        (gameid = @gameid)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "geography_temples1";
             tableMapping.ColumnMappings.Add("templeid", "templeid");
-            tableMapping.ColumnMappings.Add("templename_gr", "templename_gr");
             tableMapping.ColumnMappings.Add("templename_en", "templename_en");
             tableMapping.ColumnMappings.Add("templeimg", "templeimg");
             tableMapping.ColumnMappings.Add("templeiconx", "templeiconx");
             tableMapping.ColumnMappings.Add("templeicony", "templeicony");
+            tableMapping.ColumnMappings.Add("templename_gr", "templename_gr");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `geography_temples` WHERE ((`templeid` = @p1) AND ((@p2 = 1 AND `templename_gr` IS NULL) OR (`templename_gr` = @p3)) AND ((@p4 = 1 AND `templename_en` IS NULL) OR (`templename_en` = @p5)) AND ((@p6 = 1 AND `templeimg` IS NULL) OR (`templeimg` = @p7)) AND ((@p8 = 1 AND `templeiconx` IS NULL) OR (`templeiconx` = @p9)) AND ((@p10 = 1 AND `templeicony` IS NULL) OR (`templeicony` = @p11)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `geography_temples` WHERE ((`templeid` = @p1) AND ((@p2 = 1 AND `templename_en` IS NULL) OR (`templename_en` = @p3)) AND ((@p4 = 1 AND `templeimg` IS NULL) OR (`templeimg` = @p5)) AND ((@p6 = 1 AND `templeiconx` IS NULL) OR (`templeiconx` = @p7)) AND ((@p8 = 1 AND `templeicony` IS NULL) OR (`templeicony` = @p9)) AND ((@p10 = 1 AND `templename_gr` IS NULL) OR (`templename_gr` = @p11)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -18568,7 +18568,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templename_gr";
+            param.SourceColumn = "templename_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -18577,7 +18577,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_gr";
+            param.SourceColumn = "templename_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18585,7 +18585,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templename_en";
+            param.SourceColumn = "templeimg";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -18594,7 +18594,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_en";
+            param.SourceColumn = "templeimg";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18602,16 +18602,16 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeimg";
+            param.SourceColumn = "templeiconx";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p7";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeimg";
+            param.SourceColumn = "templeiconx";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18619,7 +18619,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeiconx";
+            param.SourceColumn = "templeicony";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -18628,7 +18628,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeiconx";
+            param.SourceColumn = "templeicony";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18636,96 +18636,96 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeicony";
+            param.SourceColumn = "templename_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p11";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templeicony";
+            param.SourceColumn = "templename_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `geography_temples` (`templename_gr`, `templename_en`, `templeimg`, `" +
-                "templeiconx`, `templeicony`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `geography_temples` (`templename_en`, `templeimg`, `templeiconx`, `te" +
+                "mpleicony`, `templename_gr`) VALUES (@p1, @p2, @p3, @p4, @p5)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_gr";
+            param.SourceColumn = "templename_en";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_en";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
             param.SourceColumn = "templeimg";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
+            param.ParameterName = "@p3";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "templeiconx";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "templeicony";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "templename_gr";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `geography_temples` SET `templename_gr` = @p1, `templename_en` = @p2, `templeimg` = @p3, `templeiconx` = @p4, `templeicony` = @p5 WHERE ((`templeid` = @p6) AND ((@p7 = 1 AND `templename_gr` IS NULL) OR (`templename_gr` = @p8)) AND ((@p9 = 1 AND `templename_en` IS NULL) OR (`templename_en` = @p10)) AND ((@p11 = 1 AND `templeimg` IS NULL) OR (`templeimg` = @p12)) AND ((@p13 = 1 AND `templeiconx` IS NULL) OR (`templeiconx` = @p14)) AND ((@p15 = 1 AND `templeicony` IS NULL) OR (`templeicony` = @p16)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `geography_temples` SET `templename_en` = @p1, `templeimg` = @p2, `templeiconx` = @p3, `templeicony` = @p4, `templename_gr` = @p5 WHERE ((`templeid` = @p6) AND ((@p7 = 1 AND `templename_en` IS NULL) OR (`templename_en` = @p8)) AND ((@p9 = 1 AND `templeimg` IS NULL) OR (`templeimg` = @p10)) AND ((@p11 = 1 AND `templeiconx` IS NULL) OR (`templeiconx` = @p12)) AND ((@p13 = 1 AND `templeicony` IS NULL) OR (`templeicony` = @p14)) AND ((@p15 = 1 AND `templename_gr` IS NULL) OR (`templename_gr` = @p16)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_gr";
+            param.SourceColumn = "templename_en";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_en";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.IsNullable = true;
             param.SourceColumn = "templeimg";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
+            param.ParameterName = "@p3";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "templeiconx";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "templeicony";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "templename_gr";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
@@ -18740,7 +18740,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templename_gr";
+            param.SourceColumn = "templename_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18749,7 +18749,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_gr";
+            param.SourceColumn = "templename_en";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18757,7 +18757,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templename_en";
+            param.SourceColumn = "templeimg";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18766,7 +18766,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templename_en";
+            param.SourceColumn = "templeimg";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18774,16 +18774,16 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeimg";
+            param.SourceColumn = "templeiconx";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p12";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeimg";
+            param.SourceColumn = "templeiconx";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18791,7 +18791,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeiconx";
+            param.SourceColumn = "templeicony";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -18800,7 +18800,7 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeiconx";
+            param.SourceColumn = "templeicony";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18808,16 +18808,16 @@ WHERE        (gameid = @gameid)";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "templeicony";
+            param.SourceColumn = "templename_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p16";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "templeicony";
+            param.SourceColumn = "templename_gr";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -18835,7 +18835,8 @@ WHERE        (gameid = @gameid)";
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM ancienttempledb.geography_temples";
+            this._commandCollection[0].CommandText = "SELECT        templeid, templename_en, templeimg, templeiconx, templeicony, templ" +
+                "ename_gr\r\nFROM            geography_temples";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18896,7 +18897,7 @@ WHERE        (gameid = @gameid)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, string p3, string p5, string p7, global::System.Nullable<int> p9, global::System.Nullable<int> p11) {
+        public virtual int Delete(int p1, string p3, string p5, global::System.Nullable<int> p7, global::System.Nullable<int> p9, string p11) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             if ((p3 == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -18914,13 +18915,13 @@ WHERE        (gameid = @gameid)";
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(p5));
             }
-            if ((p7 == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((p7.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(p7.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p7));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((p9.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
@@ -18930,13 +18931,13 @@ WHERE        (gameid = @gameid)";
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((p11.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(p11.Value));
-            }
-            else {
+            if ((p11 == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(p11));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -18958,7 +18959,7 @@ WHERE        (gameid = @gameid)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, string p2, string p3, global::System.Nullable<int> p4, global::System.Nullable<int> p5) {
+        public virtual int Insert(string p1, string p2, global::System.Nullable<int> p3, global::System.Nullable<int> p4, string p5) {
             if ((p1 == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -18971,11 +18972,11 @@ WHERE        (gameid = @gameid)";
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
             }
-            if ((p3 == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((p3.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(p3.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p3));
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((p4.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((int)(p4.Value));
@@ -18983,11 +18984,11 @@ WHERE        (gameid = @gameid)";
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((p5.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(p5.Value));
+            if ((p5 == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(p5));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -19009,7 +19010,7 @@ WHERE        (gameid = @gameid)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, string p2, string p3, global::System.Nullable<int> p4, global::System.Nullable<int> p5, int p6, string p8, string p10, string p12, global::System.Nullable<int> p14, global::System.Nullable<int> p16) {
+        public virtual int Update(string p1, string p2, global::System.Nullable<int> p3, global::System.Nullable<int> p4, string p5, int p6, string p8, string p10, global::System.Nullable<int> p12, global::System.Nullable<int> p14, string p16) {
             if ((p1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -19022,11 +19023,11 @@ WHERE        (gameid = @gameid)";
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
             }
-            if ((p3 == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((p3.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(p3.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((p4.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p4.Value));
@@ -19034,11 +19035,11 @@ WHERE        (gameid = @gameid)";
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((p5.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(p5.Value));
+            if ((p5 == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(p6));
             if ((p8 == null)) {
@@ -19057,13 +19058,13 @@ WHERE        (gameid = @gameid)";
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p10));
             }
-            if ((p12 == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((p12.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(p12.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(p12));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((p14.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
@@ -19073,13 +19074,13 @@ WHERE        (gameid = @gameid)";
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((p16.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(p16.Value));
-            }
-            else {
+            if ((p16 == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(p16));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

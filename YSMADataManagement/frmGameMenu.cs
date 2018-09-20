@@ -63,5 +63,12 @@ namespace YSMADataManagement
             frm.gameid = 6;
             frm.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmIntro frm = new frmIntro();
+            frm.gameid = 7;
+            frm.Show();
+        }
     }
 }

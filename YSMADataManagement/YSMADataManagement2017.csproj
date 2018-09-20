@@ -26,7 +26,7 @@
     <InstallUrl>http://applications.diadrasis.net/installations/ysma/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -88,7 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ancienttempledbDataSet.Designer.cs">
+    <Compile Include="ancienttempledbDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ancienttempledbDataSet.xsd</DependentUpon>
@@ -310,8 +310,8 @@
     </None>
     <None Include="ancienttempledbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ancienttempledbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>ancienttempledbDataSet2.Designer.cs</LastGenOutput>
     </None>
     <None Include="ancienttempledbDataSet.xss">
       <DependentUpon>ancienttempledbDataSet.xsd</DependentUpon>
